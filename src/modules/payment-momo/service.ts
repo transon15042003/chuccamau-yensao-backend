@@ -40,11 +40,10 @@ type Options = {
 };
 
 function toVnd(amount: InitiatePaymentInput["amount"]): number {
-  const n =
-    typeof amount === "object" && amount && "numeric_" in amount
-      ? Number((amount as { numeric_: number }).numeric_)
-      : Number(amount);
-  return Math.round(n);
+  if (typeof amount === "object" && amount && "numeric_" in amount) {
+    return Math.round(Number((amount as Record<string, unknown>).numeric_));
+  }
+  return Math.round(Number(amount));
 }
 
 class MomoProviderService extends AbstractPaymentProvider<Options> {
