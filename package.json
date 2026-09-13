@@ -14,6 +14,7 @@
   ],
   "scripts": {
     "build": "medusa build && rm -rf public && cp -R .medusa/server/public public",
+    "seed": "medusa exec ./src/scripts/seed.ts",
     "start": "medusa start",
     "dev": "medusa develop",
     "test:integration:http": "TEST_TYPE=integration:http NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
