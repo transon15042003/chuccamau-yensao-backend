@@ -43,6 +43,7 @@ Direct host cho migrate; `sslmode=require`. **Không commit** password.
 
 ```text
 Build:  node .yarn/releases/yarn-4.12.0.cjs install && node .yarn/releases/yarn-4.12.0.cjs build
+# (package.json build also copies .medusa/server/public → public for medusa start)
 Start:  node .yarn/releases/yarn-4.12.0.cjs medusa db:migrate && node .yarn/releases/yarn-4.12.0.cjs medusa start
 ```
 

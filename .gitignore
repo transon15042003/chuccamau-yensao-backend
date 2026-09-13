@@ -35,3 +35,4 @@ scripts/*.body
 .medusa
 .publishable-key
 .env.neon.local
+public
