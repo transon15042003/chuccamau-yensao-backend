@@ -271,26 +271,21 @@ Làm phase theo thứ tự. Đừng deploy (Phase 6) trước khi Phase 0–2 xa
 
 ### Việc đã / cần làm
 
-- [x] Chọn đường deploy: **Render Blueprint** (`render.yaml`)
-- [ ] Apply Blueprint trên dashboard (Postgres + Web)
-- [ ] Secrets / CORS production sau khi có URL service
-- [ ] Seed + publishable key → storefront prod
-- [ ] Backup / health / (tuỳ chọn) Redis
+- [x] Hướng free-forever: **Neon** (Postgres) + **Northflank** (Medusa) — `docs/deploy-free.md` + `Dockerfile`
+- [x] Bỏ Render Blueprint / Supabase cho Phase 6 (Render DB hết hạn 30 ngày; Supabase hết slot free)
+- [ ] Tạo Neon project + `DATABASE_URL`
+- [ ] Deploy Medusa lên Northflank (hoặc Oracle Always Free nếu cần 24/7)
+- [ ] Secrets / CORS + seed + publishable key → FE
+- [ ] (Tuỳ chọn) Redis / backup
 
 ### Setup Phase 6
 
-**Cách A — Render Blueprint**  
-1. Dashboard Render → **New → Blueprint** → repo `chuccamau-yensao-backend`, branch `feat/medusa-backend-mvp`, file `render.yaml`.  
-2. Điền `STORE_CORS`, `AUTH_CORS`, `STORE_PUBLIC_URL`, `MEDUSA_BACKEND_URL`.  
-3. Apply → đợi Postgres + Web. Shell: `medusa user` rồi `yarn seed`.  
-4. Copy `pk_…` vào storefront prod env.
+Xem chi tiết: **`docs/deploy-free.md`**.
 
-**Cách B — Supabase Postgres + Render Web**  
-1. Tạo project Supabase (cost confirm trước).  
-2. `DATABASE_URL` (`sslmode=require`) → env Web Service.  
-3. Build/start như `docs/deploy-render.md`.
-
-**MCP Cursor:** Render — nếu `list_workspaces` = unauthorized, mở Settings → MCP → Render → đăng nhập lại chọn workspace.
+1. Neon Free → copy connection string (`sslmode=require`).
+2. Northflank Developer Sandbox → Git deploy branch `feat/medusa-backend-mvp` (Dockerfile).
+3. Env: `DATABASE_URL`, JWT/COOKIE, CORS, `MEDUSA_BACKEND_URL`, `PAYMENT_MOCK=1`.
+4. Shell: `medusa user` · `yarn seed` · đưa `pk_…` vào storefront.
 ---
 
 ## Phase 7 — Chất lượng & bảo mật
@@ -333,4 +328,4 @@ Chỉ bắt đầu khi Phase 0–6 ổn định trên production. Mỗi mục c�
 2. Ghi ngắn trong PR khi đóng phase.  
 3. Scope mới → đúng phase; không nhét vào MVP đã đóng.
 
-**Cập nhật:** 2026-09-14 — Phase 5 account UI; Phase 6 render.yaml + hướng dẫn MCP.
+**Cập nhật:** 2026-09-14 — Phase 6 chuyển Neon + Northflank (free-forever); bỏ Render Blueprint.

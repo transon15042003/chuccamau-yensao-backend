@@ -9,6 +9,11 @@ Medusa v2.8.4 + Postgres for the `chuccamau-yensao` storefront.
 - PostgreSQL (local service **or** Docker Compose below)
 - DB role/database: `medusa` / `medusa` (see `scripts/bootstrap-medusa-db.ps1` if needed)
 
+## Deploy (free forever)
+
+Phase 6: **Neon** (Postgres) + **Northflank** (app) — see [`docs/deploy-free.md`](docs/deploy-free.md).  
+Không dùng Render Blueprint / Supabase cho production free-tier.
+
 ## Quick start
 
 ```bash

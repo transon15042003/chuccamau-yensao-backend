@@ -1,0 +1,14 @@
+node_modules
+.medusa
+.git
+.env
+.env.*
+!.env.template
+*.md
+docs
+scripts/*.out.txt
+scripts/*.done
+static
+.upload
+.DS_Store
+integration-tests
