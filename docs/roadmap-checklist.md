@@ -30,17 +30,17 @@ Checklist quản lý sau MVP. Đánh dấu `[x]` khi xong; ghi ngày/commit nế
 - [x] Guest checkout ổn định (cookie/cart transfer nếu có login sau) — COD guest đã chạy; transfer khi login để Phase 5
 - [x] Order retrieve by id cho trang cảm ơn — `GET /store/orders/:id` (guest OK) · FE `+metadata`
 - [x] Hủy đơn cơ bản từ Admin — `POST /admin/orders/:id/cancel` · `yarn admin:cancel`
-- [ ] Tax region VN (nếu cần VAT; hiện seed tối thiểu) — defer
+- [x] Tax region VN tối thiểu (`tp_system` trong seed) — VAT rates chỉ khi shop cần
 
 ---
 
 ## Phase 2 — Thanh toán online
 
-- [ ] Chọn gateway ưu tiên: VNPay và/hoặc MoMo (storefront types đã có)
-- [ ] Medusa payment provider plugin + webhook
-- [ ] Return/IPN URL + trang kết quả thanh toán storefront
-- [ ] Đối soát `pending` / `paid` / `failed` với `OrderPaymentStatus`
-- [ ] Giữ COD song song; cấu hình bật/tắt theo env
+- [x] VNPay + MoMo Medusa payment providers (`pp_vnpay_vnpay`, `pp_momo_momo`)
+- [x] IPN routes `/hooks/vnpay/ipn`, `/hooks/momo/ipn` + return pages storefront
+- [x] Đối soát: authorize → order; FE map `payment_status` captured → `paid`
+- [x] Giữ COD (`pp_system_default`); `PAYMENT_MOCK=1` local; sandbox env trong `.env.template`
+- [x] Proof: `yarn checkout:online vnpay|momo` (mock complete)
 
 ---
 
@@ -110,4 +110,4 @@ Checklist quản lý sau MVP. Đánh dấu `[x]` khi xong; ghi ngày/commit nế
 2. Mỗi mục xong: tick + ghi 1 dòng trong PR / `docs/superpowers/sdd/progress.md`.
 3. Scope creep: mục mới thêm vào phase phù hợp, không xen vào MVP đã đóng.
 
-**Cập nhật lần này:** 2026-09-14 — Phase 1 gần xong (còn tax VAT nếu cần).
+**Cập nhật lần này:** 2026-09-14 — Phase 1 đóng; Phase 2 VNPay+MoMo (mock E2E).

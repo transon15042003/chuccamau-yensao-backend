@@ -23,6 +23,7 @@ import {
   createTaxRegionsWorkflow,
   linkSalesChannelsToApiKeyWorkflow,
   linkSalesChannelsToStockLocationWorkflow,
+  updateRegionsWorkflow,
   updateStoresStep,
   updateStoresWorkflow,
 } from "@medusajs/medusa/core-flows";
@@ -99,14 +100,31 @@ export default async function seed({ container }: ExecArgs) {
             name: "Vietnam",
             currency_code: "vnd",
             countries,
-            payment_providers: ["pp_system_default"],
+            payment_providers: [
+              "pp_system_default",
+              "pp_vnpay_vnpay",
+              "pp_momo_momo",
+            ],
           },
         ],
       },
     });
     region = result[0];
   } else {
-    logger.info(`Skip region (exists): ${region.name}`);
+    logger.info(`Skip region create (exists): ${region.name}`);
+    await updateRegionsWorkflow(container).run({
+      input: {
+        selector: { id: region.id },
+        update: {
+          payment_providers: [
+            "pp_system_default",
+            "pp_vnpay_vnpay",
+            "pp_momo_momo",
+          ],
+        },
+      },
+    });
+    logger.info("Region payment providers synced (COD + VNPay + MoMo)");
   }
 
   try {

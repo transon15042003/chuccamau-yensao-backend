@@ -50,7 +50,7 @@ corepack yarn sync:inventory   # stock from seed JSON by SKU
 corepack yarn verify:stock     # assert DB matches JSON
 ```
 
-> Note: out-of-stock does **not** yet block `cart.complete` in this setup; tracked in Phase 1 of `docs/roadmap-checklist.md`.
+> Note: OOS at complete is blocked by `src/api/middlewares.ts` — prove with `yarn verify:oos`.
 
 ## Checkout COD proof
 
@@ -58,6 +58,23 @@ corepack yarn verify:stock     # assert DB matches JSON
 corepack yarn dev   # terminal A
 PUBLISHABLE_API_KEY=pk_... corepack yarn checkout:cod
 ```
+
+## Online payment (VNPay + MoMo)
+
+Local mock (no sandbox keys):
+
+```bash
+# .env: PAYMENT_MOCK=1
+corepack yarn seed   # attaches pp_vnpay_vnpay + pp_momo_momo to VN region
+PUBLISHABLE_API_KEY=pk_... corepack yarn checkout:online vnpay
+PUBLISHABLE_API_KEY=pk_... corepack yarn checkout:online momo
+```
+
+Sandbox: set `VNPAY_*` / `MOMO_*` in `.env`, set `PAYMENT_MOCK=0`, restart. IPN:
+- VNPay → `POST/GET /hooks/vnpay/ipn`
+- MoMo → `POST /hooks/momo/ipn`
+
+Storefront radios COD / VNPay / MoMo; online redirects to `payUrl` then `/payment/mock` (mock) or gateway return pages.
 
 If add-to-cart fails with sales-channel/stock errors:
 

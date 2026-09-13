@@ -22,6 +22,7 @@
     "test:unit": "TEST_TYPE=unit NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit",
     "smoke": "node scripts/smoke-store.mjs",
     "checkout:cod": "node scripts/checkout-cod.mjs",
+    "checkout:online": "node scripts/checkout-online.mjs",
     "fix:inventory": "medusa exec ./src/scripts/fix-inventory.ts",
     "sync:inventory": "medusa exec ./src/scripts/sync-inventory-from-seed.ts",
     "verify:oos": "node scripts/verify-oos-with-db.mjs",

@@ -37,7 +37,15 @@ const ok = (payments.payment_providers || []).some(
 );
 if (!ok) throw new Error("pp_system_default missing");
 
+const ids = (payments.payment_providers || []).map((p) => p.id);
+for (const need of ["pp_vnpay_vnpay", "pp_momo_momo"]) {
+  if (!ids.includes(need)) {
+    console.warn(`warn: ${need} not on region yet — run yarn seed`);
+  }
+}
+
 console.log("smoke ok", {
   categories: cats.product_categories.length,
   products: products.products.length,
+  payment_providers: ids,
 });
