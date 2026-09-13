@@ -25,8 +25,8 @@ Checklist quản lý sau MVP. Đánh dấu `[x]` khi xong; ghi ngày/commit nế
 ## Phase 1 — Checkout & fulfillment cứng
 
 - [x] **Enforce inventory** khi complete cart (middleware + hook; add-to-cart đã confirm sẵn của Medusa)
-- [ ] Shipping option tách `STANDARD` vs `WORKING_HOURS` (không chỉ metadata)
-- [ ] Cart metadata: `payment_method`, `shipping_method`, invoice, `note` — map rõ sang order
+- [x] Shipping option tách `STANDARD` vs `WORKING_HOURS` (seed + store API; FE chọn theo `type.code`)
+- [x] Cart metadata: `payment_method`, `shipping_method`, invoice, `note` — Medusa copy `cart.metadata` → `order.metadata` (prove trong `checkout:cod`)
 - [ ] Guest checkout ổn định (cookie/cart transfer nếu có login sau)
 - [ ] Order retrieve by id/display_id cho trang cảm ơn storefront
 - [ ] Hủy / hoàn đơn cơ bản từ Admin
@@ -110,4 +110,4 @@ Checklist quản lý sau MVP. Đánh dấu `[x]` khi xong; ghi ngày/commit nế
 2. Mỗi mục xong: tick + ghi 1 dòng trong PR / `docs/superpowers/sdd/progress.md`.
 3. Scope creep: mục mới thêm vào phase phù hợp, không xen vào MVP đã đóng.
 
-**Cập nhật lần này:** 2026-09-13 — tạo checklist; bắt đầu Phase 0 checkout E2E.
+**Cập nhật lần này:** 2026-09-14 — dual shipping STANDARD/WORKING_HOURS; metadata order prove.

@@ -201,31 +201,77 @@ export default async function seed({ container }: ExecArgs) {
     logger.info("Stock location ↔ fulfillment set link exists");
   }
 
-  const existingOptions = await fulfillmentModuleService.listShippingOptions({
-    name: "Giao tiêu chuẩn",
-  });
-  if (!existingOptions.length) {
-    const serviceZoneId =
-      fulfillmentSet.service_zones?.[0]?.id ??
-      (
-        await fulfillmentModuleService.retrieveFulfillmentSet(fulfillmentSet.id, {
-          relations: ["service_zones"],
-        })
-      ).service_zones[0].id;
+  const serviceZoneId =
+    fulfillmentSet.service_zones?.[0]?.id ??
+    (
+      await fulfillmentModuleService.retrieveFulfillmentSet(fulfillmentSet.id, {
+        relations: ["service_zones"],
+      })
+    ).service_zones[0].id;
+
+  const desiredShipping = [
+    {
+      name: "Giao tiêu chuẩn",
+      type: {
+        label: "Standard",
+        description: "Giao hàng tiêu chuẩn",
+        code: "STANDARD",
+      },
+    },
+    {
+      name: "Giao trong giờ làm việc",
+      type: {
+        label: "Working hours",
+        description: "Giao trong khung giờ làm việc",
+        code: "WORKING_HOURS",
+      },
+    },
+  ] as const;
+
+  const existingAll = await fulfillmentModuleService.listShippingOptions(
+    {},
+    { take: 50 }
+  );
+  const byCode = new Map(
+    existingAll
+      .filter((o: { type?: { code?: string } }) => o.type?.code)
+      .map((o: { type: { code: string } }) => [o.type.code.toUpperCase(), o])
+  );
+  const byName = new Map(
+    existingAll.map((o: { name: string }) => [o.name, o])
+  );
+
+  for (const desired of desiredShipping) {
+    const existing =
+      byCode.get(desired.type.code) || byName.get(desired.name) || null;
+    if (existing) {
+      // Align legacy "standard" → STANDARD without recreating prices/links
+      if (
+        existing.type?.code !== desired.type.code ||
+        existing.name !== desired.name
+      ) {
+        await fulfillmentModuleService.updateShippingOptions(existing.id, {
+          name: desired.name,
+          type: desired.type,
+        });
+        logger.info(
+          `Updated shipping option ${existing.id} → ${desired.type.code}`
+        );
+      } else {
+        logger.info(`Skip shipping option ${desired.type.code} (exists)`);
+      }
+      continue;
+    }
 
     await createShippingOptionsWorkflow(container).run({
       input: [
         {
-          name: "Giao tiêu chuẩn",
+          name: desired.name,
           price_type: "flat",
           provider_id: "manual_manual",
           service_zone_id: serviceZoneId,
           shipping_profile_id: shippingProfile.id,
-          type: {
-            label: "Standard",
-            description: "Giao hàng tiêu chuẩn",
-            code: "standard",
-          },
+          type: desired.type,
           prices: [
             { currency_code: "vnd", amount: 0 },
             { region_id: region!.id, amount: 0 },
@@ -237,8 +283,7 @@ export default async function seed({ container }: ExecArgs) {
         },
       ],
     });
-  } else {
-    logger.info("Skip shipping option (exists)");
+    logger.info(`Created shipping option ${desired.type.code}`);
   }
 
   await linkSalesChannelsToStockLocationWorkflow(container).run({

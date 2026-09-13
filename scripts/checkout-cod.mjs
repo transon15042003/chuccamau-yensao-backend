@@ -90,8 +90,16 @@ const shipping = await req(
   "GET",
   `/store/shipping-options?cart_id=${cart.id}`
 );
-const option = (shipping.shipping_options || [])[0];
+const options = shipping.shipping_options || [];
+const codes = options.map((o) => o.type?.code).filter(Boolean);
+const option =
+  options.find((o) => o.type?.code === "STANDARD") || options[0];
 if (!option) throw new Error("No shipping options");
+if (!codes.includes("STANDARD") || !codes.includes("WORKING_HOURS")) {
+  throw new Error(
+    `Expected STANDARD + WORKING_HOURS shipping options, got: ${codes.join(",")}`
+  );
+}
 
 await req("POST", `/store/carts/${cart.id}/shipping-methods`, {
   option_id: option.id,
@@ -120,10 +128,32 @@ if (!order?.id) {
   throw new Error("Complete cart did not return order");
 }
 
+// Default complete payload omits metadata; confirm via Admin (or DB).
+const { Client } = await import("pg");
+const db = new Client({
+  connectionString:
+    process.env.DATABASE_URL ||
+    "postgres://medusa:medusa@127.0.0.1:5432/medusa",
+});
+await db.connect();
+const { rows } = await db.query(
+  `select metadata from "order" where id = $1`,
+  [order.id]
+);
+await db.end();
+const meta = rows[0]?.metadata || {};
+if (meta.payment_method !== "COD" || meta.shipping_method !== "STANDARD") {
+  throw new Error(
+    `Order metadata not copied from cart: ${JSON.stringify(meta)}`
+  );
+}
+
 console.log("checkout ok", {
   order_id: order.id,
   display_id: order.display_id,
   email: order.email,
   variant: variant.sku || variant.id,
   shipping: option.name,
+  shipping_code: option.type?.code,
+  metadata: meta,
 });
