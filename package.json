@@ -26,7 +26,8 @@
     "sync:inventory": "medusa exec ./src/scripts/sync-inventory-from-seed.ts",
     "verify:oos": "node scripts/verify-oos-with-db.mjs",
     "verify:stock": "node scripts/verify-stock-sync.mjs",
-    "admin:orders": "node scripts/admin-list-orders.mjs"
+    "admin:orders": "node scripts/admin-list-orders.mjs",
+    "admin:cancel": "node scripts/admin-cancel-order.mjs"
   },
   "dependencies": {
     "@medusajs/admin-sdk": "2.8.4",

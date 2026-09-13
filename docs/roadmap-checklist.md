@@ -29,8 +29,8 @@ Checklist quản lý sau MVP. Đánh dấu `[x]` khi xong; ghi ngày/commit nế
 - [x] Cart metadata: `payment_method`, `shipping_method`, invoice, `note` — Medusa copy `cart.metadata` → `order.metadata` (prove trong `checkout:cod`)
 - [x] Guest checkout ổn định (cookie/cart transfer nếu có login sau) — COD guest đã chạy; transfer khi login để Phase 5
 - [x] Order retrieve by id cho trang cảm ơn — `GET /store/orders/:id` (guest OK) · FE `+metadata`
-- [ ] Hủy / hoàn đơn cơ bản từ Admin
-- [ ] Tax region VN (nếu cần VAT; hiện seed tối thiểu)
+- [x] Hủy đơn cơ bản từ Admin — `POST /admin/orders/:id/cancel` · `yarn admin:cancel`
+- [ ] Tax region VN (nếu cần VAT; hiện seed tối thiểu) — defer
 
 ---
 
@@ -110,4 +110,4 @@ Checklist quản lý sau MVP. Đánh dấu `[x]` khi xong; ghi ngày/commit nế
 2. Mỗi mục xong: tick + ghi 1 dòng trong PR / `docs/superpowers/sdd/progress.md`.
 3. Scope creep: mục mới thêm vào phase phù hợp, không xen vào MVP đã đóng.
 
-**Cập nhật lần này:** 2026-09-14 — dual shipping STANDARD/WORKING_HOURS; metadata order prove.
+**Cập nhật lần này:** 2026-09-14 — Phase 1 gần xong (còn tax VAT nếu cần).
