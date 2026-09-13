@@ -321,7 +321,7 @@ export default async function seed({ container }: ExecArgs) {
   const { data: apiKeys } = await query.graph({
     entity: "api_key",
     fields: ["id", "token", "title"],
-    filters: { type: "publishable" },
+    filters: { type: "publishable" as never },
   });
   let publishableApiKey = apiKeys?.[0] as
     | { id: string; token?: string }

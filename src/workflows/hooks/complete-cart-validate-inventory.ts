@@ -41,8 +41,8 @@ completeCartWorkflow.hooks.validate(async ({ cart }, { container }) => {
       filters: { id: salesChannelId },
     });
     locationIds = (channels?.[0]?.stock_locations ?? [])
-      .map((l: { id: string }) => l.id)
-      .filter(Boolean);
+      .map((l) => l?.id)
+      .filter((id): id is string => Boolean(id));
   }
 
   if (!locationIds.length) {
