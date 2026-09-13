@@ -42,9 +42,12 @@ Direct host cho migrate; `sslmode=require`. **Không commit** password.
 4. Build / Start:
 
 ```text
-Build:  corepack enable && yarn install && yarn build
-Start:  yarn medusa db:migrate && yarn medusa start
+Build:  node .yarn/releases/yarn-4.12.0.cjs install && node .yarn/releases/yarn-4.12.0.cjs build
+Start:  node .yarn/releases/yarn-4.12.0.cjs medusa db:migrate && node .yarn/releases/yarn-4.12.0.cjs medusa start
 ```
+
+(Không dùng `corepack enable` trên Render — EROFS. Dùng Yarn binary trong repo.)
+Node: `20.x` (`.node-version` / `engines`).
 
 5. Plan: **Free** · Region: **Singapore**
 6. Env: xem `docs/render-env.template` — dán `DATABASE_URL` Neon + JWT/COOKIE.
