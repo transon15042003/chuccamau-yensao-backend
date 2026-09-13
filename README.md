@@ -31,6 +31,19 @@ corepack yarn dev
 # Store API http://localhost:9000  Admin http://localhost:9000/app
 ```
 
+## Checkout COD proof
+
+```bash
+corepack yarn dev   # terminal A
+PUBLISHABLE_API_KEY=pk_... corepack yarn checkout:cod
+```
+
+If add-to-cart fails with sales-channel/stock errors:
+
+```bash
+corepack yarn fix:inventory
+```
+
 ## Smoke check
 
 ```bash

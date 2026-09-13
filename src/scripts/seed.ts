@@ -334,36 +334,44 @@ export default async function seed({ container }: ExecArgs) {
       salesChannelId: defaultSalesChannel[0].id,
     });
 
-    const { result: createdProducts } = await createProductsWorkflow(
-      container
-    ).run({
+    await createProductsWorkflow(container).run({
       input: {
         products: [{ ...input, status: ProductStatus.PUBLISHED }],
       },
     });
+  }
 
-    const created = createdProducts[0];
-    const stockBySku = new Map(
-      product.variants.map((v) => [v.sku, v.stock ?? 0])
-    );
-
-    const inventoryLevels: CreateInventoryLevelInput[] = [];
-    for (const variant of created.variants ?? []) {
-      const invId = (variant as { inventory_items?: { inventory_item_id: string }[] })
-        .inventory_items?.[0]?.inventory_item_id;
-      if (!invId) continue;
-      inventoryLevels.push({
-        location_id: stockLocation.id,
-        inventory_item_id: invId,
-        stocked_quantity: stockBySku.get(variant.sku || "") ?? 0,
-      });
-    }
-
-    if (inventoryLevels.length) {
-      await createInventoryLevelsWorkflow(container).run({
-        input: { inventory_levels: inventoryLevels },
-      });
-    }
+  // Inventory levels (createProductsWorkflow creates items; levels must be explicit)
+  logger.info("Seeding inventory levels...");
+  const { data: inventoryItems } = await query.graph({
+    entity: "inventory_item",
+    fields: ["id"],
+  });
+  const { data: existingLevels } = await query.graph({
+    entity: "inventory_level",
+    fields: ["inventory_item_id", "location_id"],
+  });
+  const haveLevel = new Set(
+    (existingLevels || []).map(
+      (l: { inventory_item_id: string; location_id: string }) =>
+        `${l.inventory_item_id}:${l.location_id}`
+    )
+  );
+  const inventoryLevels: CreateInventoryLevelInput[] = [];
+  for (const item of inventoryItems || []) {
+    const key = `${item.id}:${stockLocation.id}`;
+    if (haveLevel.has(key)) continue;
+    inventoryLevels.push({
+      inventory_item_id: item.id,
+      location_id: stockLocation.id,
+      stocked_quantity: 100,
+    });
+  }
+  if (inventoryLevels.length) {
+    await createInventoryLevelsWorkflow(container).run({
+      input: { inventory_levels: inventoryLevels },
+    });
+    logger.info(`Created ${inventoryLevels.length} inventory levels`);
   }
 
   logger.info("Seed completed.");
