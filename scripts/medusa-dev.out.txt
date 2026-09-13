@@ -1,0 +1,33 @@
+[32minfo[39m:    Watching filesystem to reload dev server on file change
+[32minfo[39m:    Skipping instrumentation registration. No register function found.
+redisUrl not found. A fake redis instance will be used.
+[33mwarn[39m:    Local Event Bus installed. This is not recommended for production.
+[32minfo[39m:    Locking module: Using "in-memory" as default.
+[32minfo[39m:    No job to load from C:\Users\trans\OneDrive\Desktop\GitHub\chuccamau-yensao-backend\node_modules\@medusajs\medusa\dist\jobs. skipped.
+[32minfo[39m:    scripts\medusa-dev.out.txt modified: Restarting dev server
+[32minfo[39m:    scripts\medusa-dev.out.txt modified: Restarting dev server
+[32minfo[39m:    scripts\medusa-dev.out.txt modified: Restarting dev server
+[32minfo[39m:    scripts\medusa-dev.out.txt modified: Restarting dev server
+[32minfo[39m:    scripts\medusa-dev.out.txt modified: Restarting dev server
+[32minfo[39m:    Skipping instrumentation registration. No register function found.
+redisUrl not found. A fake redis instance will be used.
+[33mwarn[39m:    Local Event Bus installed. This is not recommended for production.
+[32minfo[39m:    Locking module: Using "in-memory" as default.
+[32minfo[39m:    No job to load from C:\Users\trans\OneDrive\Desktop\GitHub\chuccamau-yensao-backend\node_modules\@medusajs\medusa\dist\jobs. skipped.
+[32minfo[39m:    scripts\medusa-dev.out.txt modified: Restarting dev server
+[32minfo[39m:    scripts\medusa-dev.out.txt modified: Restarting dev server
+[32minfo[39m:    Skipping instrumentation registration. No register function found.
+redisUrl not found. A fake redis instance will be used.
+[33mwarn[39m:    Local Event Bus installed. This is not recommended for production.
+[32minfo[39m:    Locking module: Using "in-memory" as default.
+[32minfo[39m:    No job to load from C:\Users\trans\OneDrive\Desktop\GitHub\chuccamau-yensao-backend\node_modules\@medusajs\medusa\dist\jobs. skipped.
+[32minfo[39m:    scripts\medusa-dev.out.txt modified: Restarting dev server
+[32minfo[39m:    scripts\medusa-dev.out.txt modified: Restarting dev server
+[32minfo[39m:    Skipping instrumentation registration. No register function found.
+redisUrl not found. A fake redis instance will be used.
+[33mwarn[39m:    Local Event Bus installed. This is not recommended for production.
+[32minfo[39m:    Locking module: Using "in-memory" as default.
+[32minfo[39m:    No job to load from C:\Users\trans\OneDrive\Desktop\GitHub\chuccamau-yensao-backend\node_modules\@medusajs\medusa\dist\jobs. skipped.
+[32minfo[39m:    scripts\medusa-dev.out.txt modified: Restarting dev server
+[32minfo[39m:    scripts\medusa-dev.out.txt modified: Restarting dev server
+[32minfo[39m:    scripts\medusa-dev.out.txt modified: Restarting dev server

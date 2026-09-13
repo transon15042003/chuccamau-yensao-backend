@@ -1,0 +1,375 @@
+redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    Running migrations...
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: stock_location
+[32minfo[39m:      ● Migrating Migration20240307161216
+[32minfo[39m:      ✔ Migrated Migration20240307161216
+[32minfo[39m:      ● Migrating Migration20241210073813
+[32minfo[39m:      ✔ Migrated Migration20241210073813
+[32minfo[39m:      ● Migrating Migration20250106142624
+[32minfo[39m:      ✔ Migrated Migration20250106142624
+[32minfo[39m:      ● Migrating Migration20250120110820
+[32minfo[39m:      ✔ Migrated Migration20250120110820
+[32minfo[39m:    Completed successfully
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: inventory
+[32minfo[39m:      ● Migrating Migration20240307132720
+[32minfo[39m:      ✔ Migrated Migration20240307132720
+[32minfo[39m:      ● Migrating Migration20240719123015
+[32minfo[39m:      ✔ Migrated Migration20240719123015
+[32minfo[39m:      ● Migrating Migration20241213063611
+[32minfo[39m:      ✔ Migrated Migration20241213063611
+[32minfo[39m:    Completed successfully
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: product
+[32minfo[39m:      ● Migrating InitialSetup20240401153642
+[32minfo[39m:      ✔ Migrated InitialSetup20240401153642
+[32minfo[39m:      ● Migrating Migration20240601111544
+[32minfo[39m:      ✔ Migrated Migration20240601111544
+[32minfo[39m:      ● Migrating Migration202408271511
+[32minfo[39m:      ✔ Migrated Migration202408271511
+[32minfo[39m:      ● Migrating Migration20241122120331
+[32minfo[39m:      ✔ Migrated Migration20241122120331
+[32minfo[39m:      ● Migrating Migration20241125090957
+[32minfo[39m:      ✔ Migrated Migration20241125090957
+[32minfo[39m:      ● Migrating Migration20250411073236
+[32minfo[39m:      ✔ Migrated Migration20250411073236
+[32minfo[39m:      ● Migrating Migration20250516081326
+[32minfo[39m:      ✔ Migrated Migration20250516081326
+[32minfo[39m:    Completed successfully
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: pricing
+[32minfo[39m:      ● Migrating Migration20230929122253
+[32minfo[39m:      ✔ Migrated Migration20230929122253
+[32minfo[39m:      ● Migrating Migration20240322094407
+[32minfo[39m:      ✔ Migrated Migration20240322094407
+[32minfo[39m:      ● Migrating Migration20240322113359
+[32minfo[39m:      ✔ Migrated Migration20240322113359
+[32minfo[39m:      ● Migrating Migration20240322120125
+[32minfo[39m:      ✔ Migrated Migration20240322120125
+[32minfo[39m:      ● Migrating Migration20240626133555
+[32minfo[39m:      ✔ Migrated Migration20240626133555
+[32minfo[39m:      ● Migrating Migration20240704094505
+[32minfo[39m:      ✔ Migrated Migration20240704094505
+[32minfo[39m:      ● Migrating Migration20241127114534
+[32minfo[39m:      ✔ Migrated Migration20241127114534
+[32minfo[39m:      ● Migrating Migration20241127223829
+[32minfo[39m:      ✔ Migrated Migration20241127223829
+[32minfo[39m:      ● Migrating Migration20241128055359
+[32minfo[39m:      ✔ Migrated Migration20241128055359
+[32minfo[39m:      ● Migrating Migration20241212190401
+[32minfo[39m:      ✔ Migrated Migration20241212190401
+[32minfo[39m:      ● Migrating Migration20250408145122
+[32minfo[39m:      ✔ Migrated Migration20250408145122
+[32minfo[39m:      ● Migrating Migration20250409122219
+[32minfo[39m:      ✔ Migrated Migration20250409122219
+[32minfo[39m:    Completed successfully
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: promotion
+[32minfo[39m:      ● Migrating Migration20240227120221
+[32minfo[39m:      ✔ Migrated Migration20240227120221
+[32minfo[39m:      ● Migrating Migration20240617102917
+[32minfo[39m:      ✔ Migrated Migration20240617102917
+[32minfo[39m:      ● Migrating Migration20240624153824
+[32minfo[39m:      ✔ Migrated Migration20240624153824
+[32minfo[39m:      ● Migrating Migration20241211061114
+[32minfo[39m:      ✔ Migrated Migration20241211061114
+[32minfo[39m:      ● Migrating Migration20250113094144
+[32minfo[39m:      ✔ Migrated Migration20250113094144
+[32minfo[39m:      ● Migrating Migration20250120110700
+[32minfo[39m:      ✔ Migrated Migration20250120110700
+[32minfo[39m:      ● Migrating Migration20250226130616
+[32minfo[39m:      ✔ Migrated Migration20250226130616
+[32minfo[39m:    Completed successfully
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: customer
+[32minfo[39m:      ● Migrating Migration20240124154000
+[32minfo[39m:      ✔ Migrated Migration20240124154000
+[32minfo[39m:      ● Migrating Migration20240524123112
+[32minfo[39m:      ✔ Migrated Migration20240524123112
+[32minfo[39m:      ● Migrating Migration20240602110946
+[32minfo[39m:      ✔ Migrated Migration20240602110946
+[32minfo[39m:      ● Migrating Migration20241211074630
+[32minfo[39m:      ✔ Migrated Migration20241211074630
+[32minfo[39m:    Completed successfully
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: sales_channel
+[32minfo[39m:      ● Migrating Migration20240115152146
+[32minfo[39m:      ✔ Migrated Migration20240115152146
+[32minfo[39m:    Completed successfully
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: cart
+[32minfo[39m:      ● Migrating Migration20240222170223
+[32minfo[39m:      ✔ Migrated Migration20240222170223
+[32minfo[39m:      ● Migrating Migration20240831125857
+[32minfo[39m:      ✔ Migrated Migration20240831125857
+[32minfo[39m:      ● Migrating Migration20241106085918
+[32minfo[39m:      ✔ Migrated Migration20241106085918
+[32minfo[39m:      ● Migrating Migration20241205095237
+[32minfo[39m:      ✔ Migrated Migration20241205095237
+[32minfo[39m:      ● Migrating Migration20241216183049
+[32minfo[39m:      ✔ Migrated Migration20241216183049
+[32minfo[39m:      ● Migrating Migration20241218091938
+[32minfo[39m:      ✔ Migrated Migration20241218091938
+[32minfo[39m:      ● Migrating Migration20250120115059
+[32minfo[39m:      ✔ Migrated Migration20250120115059
+[32minfo[39m:      ● Migrating Migration20250212131240
+[32minfo[39m:      ✔ Migrated Migration20250212131240
+[32minfo[39m:      ● Migrating Migration20250326151602
+[32minfo[39m:      ✔ Migrated Migration20250326151602
+[32minfo[39m:    Completed successfully
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: region
+[32minfo[39m:      ● Migrating Migration20240205173216
+[32minfo[39m:      ✔ Migrated Migration20240205173216
+[32minfo[39m:      ● Migrating Migration20240624200006
+[32minfo[39m:      ✔ Migrated Migration20240624200006
+[32minfo[39m:      ● Migrating Migration20250120110744
+[32minfo[39m:      ✔ Migrated Migration20250120110744
+[32minfo[39m:    Completed successfully
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: api_key
+[32minfo[39m:      ● Migrating InitialSetup20240221144943
+[32minfo[39m:      ✔ Migrated InitialSetup20240221144943
+[32minfo[39m:      ● Migrating Migration20240604080145
+[32minfo[39m:      ✔ Migrated Migration20240604080145
+[32minfo[39m:      ● Migrating Migration20241205122700
+[32minfo[39m:      ✔ Migrated Migration20241205122700
+[32minfo[39m:    Completed successfully
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: store
+[32minfo[39m:      ● Migrating InitialSetup20240227075933
+[32minfo[39m:      ✔ Migrated InitialSetup20240227075933
+[32minfo[39m:      ● Migrating Migration20240621145944
+[32minfo[39m:      ✔ Migrated Migration20240621145944
+[32minfo[39m:      ● Migrating Migration20241206083313
+[32minfo[39m:      ✔ Migrated Migration20241206083313
+[32minfo[39m:    Completed successfully
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: tax
+[32minfo[39m:      ● Migrating Migration20240227090331
+[32minfo[39m:      ✔ Migrated Migration20240227090331
+[32minfo[39m:      ● Migrating Migration20240710135844
+[32minfo[39m:      ✔ Migrated Migration20240710135844
+[32minfo[39m:      ● Migrating Migration20240924114005
+[32minfo[39m:      ✔ Migrated Migration20240924114005
+[32minfo[39m:      ● Migrating Migration20241212052837
+[32minfo[39m:      ✔ Migrated Migration20241212052837
+[32minfo[39m:    Completed successfully
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: currency
+[32minfo[39m:      ● Migrating InitialSetup20240228133303
+[32minfo[39m:      ✔ Migrated InitialSetup20240228133303
+[32minfo[39m:      ● Migrating Migration20240624082354
+[32minfo[39m:      ✔ Migrated Migration20240624082354
+[32minfo[39m:    Completed successfully
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: payment
+[32minfo[39m:      ● Migrating Migration20240225134525
+[32minfo[39m:      ✔ Migrated Migration20240225134525
+[32minfo[39m:      ● Migrating Migration20240806072619
+[32minfo[39m:      ✔ Migrated Migration20240806072619
+[32minfo[39m:      ● Migrating Migration20241211151053
+[32minfo[39m:      ✔ Migrated Migration20241211151053
+[32minfo[39m:      ● Migrating Migration20250115160517
+[32minfo[39m:      ✔ Migrated Migration20250115160517
+[32minfo[39m:      ● Migrating Migration20250120110552
+[32minfo[39m:      ✔ Migrated Migration20250120110552
+[32minfo[39m:      ● Migrating Migration20250123122334
+[32minfo[39m:      ✔ Migrated Migration20250123122334
+[32minfo[39m:      ● Migrating Migration20250206105639
+[32minfo[39m:      ✔ Migrated Migration20250206105639
+[32minfo[39m:      ● Migrating Migration20250207132723
+[32minfo[39m:      ✔ Migrated Migration20250207132723
+[32minfo[39m:    Completed successfully
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: order
+[32minfo[39m:      ● Migrating Migration20240219102530
+[32minfo[39m:      ✔ Migrated Migration20240219102530
+[32minfo[39m:      ● Migrating Migration20240604100512
+[32minfo[39m:      ✔ Migrated Migration20240604100512
+[32minfo[39m:      ● Migrating Migration20240715102100
+[32minfo[39m:      ✔ Migrated Migration20240715102100
+[32minfo[39m:      ● Migrating Migration20240715174100
+[32minfo[39m:      ✔ Migrated Migration20240715174100
+[32minfo[39m:      ● Migrating Migration20240716081800
+[32minfo[39m:      ✔ Migrated Migration20240716081800
+[32minfo[39m:      ● Migrating Migration20240801085921
+[32minfo[39m:      ✔ Migrated Migration20240801085921
+[32minfo[39m:      ● Migrating Migration20240821164505
+[32minfo[39m:      ✔ Migrated Migration20240821164505
+[32minfo[39m:      ● Migrating Migration20240821170920
+[32minfo[39m:      ✔ Migrated Migration20240821170920
+[32minfo[39m:      ● Migrating Migration20240827133639
+[32minfo[39m:      ✔ Migrated Migration20240827133639
+[32minfo[39m:      ● Migrating Migration20240902195921
+[32minfo[39m:      ✔ Migrated Migration20240902195921
+[32minfo[39m:      ● Migrating Migration20240913092514
+[32minfo[39m:      ✔ Migrated Migration20240913092514
+[32minfo[39m:      ● Migrating Migration20240930122627
+[32minfo[39m:      ✔ Migrated Migration20240930122627
+[32minfo[39m:      ● Migrating Migration20241014142943
+[32minfo[39m:      ✔ Migrated Migration20241014142943
+[32minfo[39m:      ● Migrating Migration20241106085223
+[32minfo[39m:      ✔ Migrated Migration20241106085223
+[32minfo[39m:      ● Migrating Migration20241129124827
+[32minfo[39m:      ✔ Migrated Migration20241129124827
+[32minfo[39m:      ● Migrating Migration20241217162224
+[32minfo[39m:      ✔ Migrated Migration20241217162224
+[32minfo[39m:      ● Migrating Migration20250326151554
+[32minfo[39m:      ✔ Migrated Migration20250326151554
+[32minfo[39m:      ● Migrating Migration20250522181137
+[32minfo[39m:      ✔ Migrated Migration20250522181137
+[32minfo[39m:    Completed successfully
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: auth
+[32minfo[39m:      ● Migrating Migration20240205025928
+[32minfo[39m:      ✔ Migrated Migration20240205025928
+[32minfo[39m:      ● Migrating Migration20240529080336
+[32minfo[39m:      ✔ Migrated Migration20240529080336
+[32minfo[39m:      ● Migrating Migration20241202100304
+[32minfo[39m:      ✔ Migrated Migration20241202100304
+[32minfo[39m:    Completed successfully
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: auth
+[32minfo[39m:    Skipped. Database is up-to-date for module.
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: auth
+[32minfo[39m:    Skipped. Database is up-to-date for module.
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: user
+[32minfo[39m:      ● Migrating Migration20240214033943
+[32minfo[39m:      ✔ Migrated Migration20240214033943
+[32minfo[39m:      ● Migrating Migration20240703095850
+Note: If the index "IDX_user_email" fails to create, then delete any existing users with duplicate emails before retrying the migration.
+[32minfo[39m:      ✔ Migrated Migration20240703095850
+[32minfo[39m:      ● Migrating Migration20241202103352
+[32minfo[39m:      ✔ Migrated Migration20241202103352
+[32minfo[39m:    Completed successfully
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: fulfillment
+[32minfo[39m:      ● Migrating Migration20240311145700_InitialSetupMigration
+[32minfo[39m:      ✔ Migrated Migration20240311145700_InitialSetupMigration
+[32minfo[39m:      ● Migrating Migration20240821170957
+[32minfo[39m:      ✔ Migrated Migration20240821170957
+[32minfo[39m:      ● Migrating Migration20240917161003
+[32minfo[39m:      ✔ Migrated Migration20240917161003
+[32minfo[39m:      ● Migrating Migration20241217110416
+[32minfo[39m:      ✔ Migrated Migration20241217110416
+[32minfo[39m:      ● Migrating Migration20250113122235
+[32minfo[39m:      ✔ Migrated Migration20250113122235
+[32minfo[39m:      ● Migrating Migration20250120115002
+[32minfo[39m:      ✔ Migrated Migration20250120115002
+[32minfo[39m:    Completed successfully
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: fulfillment
+[32minfo[39m:    Skipped. Database is up-to-date for module.
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: fulfillment
+[32minfo[39m:    Skipped. Database is up-to-date for module.
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: notification
+[32minfo[39m:      ● Migrating Migration20240509083918_InitialSetupMigration
+[32minfo[39m:      ✔ Migrated Migration20240509083918_InitialSetupMigration
+[32minfo[39m:      ● Migrating Migration20240628075401
+[32minfo[39m:      ✔ Migrated Migration20240628075401
+[32minfo[39m:      ● Migrating Migration20240830094712
+[32minfo[39m:      ✔ Migrated Migration20240830094712
+[32minfo[39m:      ● Migrating Migration20250120110514
+[32minfo[39m:      ✔ Migrated Migration20250120110514
+[32minfo[39m:    Completed successfully
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: notification
+[32minfo[39m:    Skipped. Database is up-to-date for module.
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: notification
+[32minfo[39m:    Skipped. Database is up-to-date for module.
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: cache
+[32minfo[39m:    Skipped. Database is up-to-date for module.
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: event_bus
+[32minfo[39m:    Skipped. Database is up-to-date for module.
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: workflows
+[32minfo[39m:      ● Migrating Migration20231228143900
+[32minfo[39m:      ✔ Migrated Migration20231228143900
+[32minfo[39m:      ● Migrating Migration20241206101446
+[32minfo[39m:      ✔ Migrated Migration20241206101446
+[32minfo[39m:      ● Migrating Migration20250128174331
+[32minfo[39m:      ✔ Migrated Migration20250128174331
+[32minfo[39m:      ● Migrating Migration20250505092459
+[32minfo[39m:      ✔ Migrated Migration20250505092459
+[32minfo[39m:    Completed successfully
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: locking
+[32minfo[39m:    Skipped. Database is up-to-date for module.
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: file
+[32minfo[39m:    Skipped. Database is up-to-date for module.
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: file
+[32minfo[39m:    Skipped. Database is up-to-date for module.
+[32minfo[39m:    
+[32minfo[39m:    
+[32minfo[39m:    MODULE: file
+[32minfo[39m:    Skipped. Database is up-to-date for module.
+
+[32minfo[39m:    Migrations completed
+
+[32minfo[39m:    Syncing links...
+┌──────────────────────────────────────────────────────────────────────────────┐│                                                                              ││   Created following links tables                                             ││   - cart.cart <> payment.payment_collection (cart_payment_collection)        ││   - cart.cart <> promotion.promotions (cart_promotion)                       ││   - stock_location.location <> fulfillment.fulfillment_provider              ││   (location_fulfillment_provider)                                            ││   - stock_location.location <> fulfillment.fulfillment_set                   ││   (location_fulfillment_set)                                                 ││   - order.order <> cart.cart (order_cart)                                    ││   - order.order <> fulfillment.fulfillments (order_fulfillment)              ││   - order.order <> payment.payment_collection (order_payment_collection)     ││   - order.order <> promotion.promotion (order_promotion)                     ││   - order.return <> fulfillment.fulfillments (return_fulfillment)            ││   - product.product <> sales_channel.sales_channel (product_sales_channel)   ││   - product.variant <> inventory.inventory                                   ││   (product_variant_inventory_item)                                           ││   - product.variant <> pricing.price_set (product_variant_price_set)         ││   - api_key.api_key <> sales_channel.sales_channel                           ││   (publishable_api_key_sales_channel)                                        ││   - region.region <> payment.payment_provider (region_payment_provider)      ││   - sales_channel.sales_channel <> stock_location.location                   ││   (sales_channel_stock_location)                                             ││   - fulfillment.shipping_option <> pricing.price_set                         ││   (shipping_option_price_set)                                                ││   - product.product <> fulfillment.shipping_profile                          ││   (product_shipping_profile)                                                 ││   - customer.customer <> payment.account_holder (customer_account_holder)    ││                                                                              │└──────────────────────────────────────────────────────────────────────────────┘
+[32minfo[39m:    Links sync completed
+
+redisUrl not found. A fake redis instance will be used.
+[33mwarn[39m:    Local Event Bus installed. This is not recommended for production.
+[32minfo[39m:    Locking module: Using "in-memory" as default.
+[32minfo[39m:    Creating migrations table 'script_migrations'...
+[32minfo[39m:    Migrations table created successfully
+
+[32minfo[39m:    Pending migration scripts to execute
+[32minfo[39m:    C:\Users\trans\OneDrive\Desktop\GitHub\chuccamau-yensao-backend\node_modules\@medusajs\medusa\dist\migration-scripts\migrate-product-shipping-profile.js
+C:\Users\trans\OneDrive\Desktop\GitHub\chuccamau-yensao-backend\node_modules\@medusajs\medusa\dist\migration-scripts\migrate-tax-region-provider.js
+
+[32minfo[39m:    Running migration scripts...
+[32minfo[39m:    Running migration script C:\Users\trans\OneDrive\Desktop\GitHub\chuccamau-yensao-backend\node_modules\@medusajs\medusa\dist\migration-scripts\migrate-product-shipping-profile.js
+[32minfo[39m:    Assigning products to shipping profile
+[32minfo[39m:    Products assigned to shipping profile
+[32minfo[39m:    Migration script C:\Users\trans\OneDrive\Desktop\GitHub\chuccamau-yensao-backend\node_modules\@medusajs\medusa\dist\migration-scripts\migrate-product-shipping-profile.js completed (0.02s)
+[32minfo[39m:    Running migration script C:\Users\trans\OneDrive\Desktop\GitHub\chuccamau-yensao-backend\node_modules\@medusajs\medusa\dist\migration-scripts\migrate-tax-region-provider.js
+[32minfo[39m:    Assigning tax system provider to tax regions
+[32minfo[39m:    System provider assigned to tax regions
+[32minfo[39m:    Migration script C:\Users\trans\OneDrive\Desktop\GitHub\chuccamau-yensao-backend\node_modules\@medusajs\medusa\dist\migration-scripts\migrate-tax-region-provider.js completed (0.01s)
+
+[32minfo[39m:    Migration scripts completed

@@ -1,0 +1,21 @@
+➤ YN0000: · Yarn 4.12.0
+➤ YN0000: ┌ Resolution step
+➤ YN0085: │ + @mikro-orm/core@npm:7.2.0, @mikro-orm/knex@npm:6.6.14, @mikro-orm/migrations@npm:7.2.0, @mikro-orm/postgresql@npm:7.2.0, @types/pg@npm:8.23.1, and 25 more.
+➤ YN0000: └ Completed in 0s 926ms
+➤ YN0000: ┌ Post-resolution validation
+➤ YN0060: │ @mikro-orm/core is listed by your project with version 7.2.0 (pbceeb4), which doesn't satisfy what @medusajs/cli and other dependencies request (but they have non-overlapping ranges!).
+➤ YN0060: │ @mikro-orm/knex is listed by your project with version 6.6.14 (p7ddef0), which doesn't satisfy what @medusajs/cli and other dependencies request (6.4.3).
+➤ YN0060: │ @mikro-orm/migrations is listed by your project with version 7.2.0 (p24f04a), which doesn't satisfy what @medusajs/cli and other dependencies request (6.4.3).
+➤ YN0060: │ @mikro-orm/postgresql is listed by your project with version 7.2.0 (p59f68c), which doesn't satisfy what @medusajs/cli and other dependencies request (6.4.3).
+➤ YN0060: │ @swc/core is listed by your project with version 1.16.2 (p2cfc69), which doesn't satisfy what @medusajs/medusa and other dependencies request (1.5.7).
+➤ YN0060: │ awilix is listed by your project with version 13.0.5 (p3fc12f), which doesn't satisfy what @medusajs/cli and other dependencies request (^8.0.1).
+➤ YN0060: │ posthog-node is listed by your project with version 5.52.1 (p926ecf), which doesn't satisfy what @medusajs/medusa and other dependencies request (^4.17.1).
+➤ YN0086: │ Some peer dependencies are incorrectly met by your project; run yarn explain peer-requirements <hash> for details, where <hash> is the six-letter p-prefixed code.
+➤ YN0086: │ Some peer dependencies are incorrectly met by dependencies; run yarn explain peer-requirements for details.
+➤ YN0000: └ Completed
+➤ YN0000: ┌ Fetch step
+➤ YN0013: │ 30 packages were added to the project (+ 12.05 MiB).
+➤ YN0000: └ Completed in 1s 143ms
+➤ YN0000: ┌ Link step
+➤ YN0000: └ Completed in 4s 659ms
+➤ YN0000: · Done with warnings in 6s 969ms
