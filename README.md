@@ -82,7 +82,17 @@ If add-to-cart fails with sales-channel/stock errors:
 corepack yarn fix:inventory
 ```
 
-## Smoke check
+## Order emails (Phase 3)
+
+Set in backend `.env` (restart `yarn dev`):
+
+```bash
+SENDGRID_API_KEY=SG....
+SENDGRID_SENDER_EMAIL=noreply@your-verified-domain.com
+ORDER_NOTIFY_OWNER_EMAIL=owner@shop.com,backup@shop.com
+```
+
+On every `order.placed` (COD + online), subscriber `src/subscribers/order-placed.ts` sends HTML+text mail to owner and customer. Without API key, it only logs skip.
 
 ```bash
 # terminal A
