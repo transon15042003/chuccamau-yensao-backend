@@ -250,13 +250,19 @@ export default async function seed({ container }: ExecArgs) {
     {},
     { take: 50 }
   );
-  const byCode = new Map(
+  const byCode = new Map<string, { id: string; name: string; type?: { code?: string } }>(
     existingAll
       .filter((o: { type?: { code?: string } }) => o.type?.code)
-      .map((o: { type: { code: string } }) => [o.type.code.toUpperCase(), o])
+      .map((o: { id: string; name: string; type: { code: string } }) => [
+        o.type.code.toUpperCase(),
+        o,
+      ])
   );
-  const byName = new Map(
-    existingAll.map((o: { name: string }) => [o.name, o])
+  const byName = new Map<string, { id: string; name: string; type?: { code?: string } }>(
+    existingAll.map((o: { id: string; name: string; type?: { code?: string } }) => [
+      o.name,
+      o,
+    ])
   );
 
   for (const desired of desiredShipping) {

@@ -85,7 +85,7 @@ export default async function syncImages({ container }: ExecArgs) {
 
     // Rebuild SKU → image rank metadata
     const metadata: Record<string, string | number | boolean> = {
-      ...(existing[0].metadata || {}),
+      ...((existing[0].metadata || {}) as Record<string, string | number | boolean>),
     };
     for (const v of product.variants) {
       const raw = v.thumbnail || product.thumbnail;
