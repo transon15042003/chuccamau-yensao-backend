@@ -1,0 +1,53 @@
+# Render Blueprint — Medusa backend (Phase 6)
+# https://render.com/docs/blueprint-spec
+# Connect repo chuccamau-yensao-backend, then Blueprint → Apply this file.
+
+services:
+  - type: web
+    name: chuccamau-yensao-backend
+    runtime: node
+    plan: free
+    region: singapore
+    branch: feat/medusa-backend-mvp
+    buildCommand: corepack enable && corepack yarn install && corepack yarn build
+    startCommand: corepack yarn medusa db:migrate && corepack yarn medusa start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: COOKIE_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: chuccamau-yensao-db
+          property: connectionString
+      - key: STORE_CORS
+        sync: false
+      - key: ADMIN_CORS
+        sync: false
+      - key: AUTH_CORS
+        sync: false
+      - key: STORE_URL
+        sync: false
+      - key: STORE_PUBLIC_URL
+        sync: false
+      - key: MEDUSA_BACKEND_URL
+        sync: false
+      - key: MEDUSA_FILE_URL
+        sync: false
+      - key: PAYMENT_MOCK
+        value: "1"
+      - key: SENDGRID_API_KEY
+        sync: false
+      - key: SENDGRID_SENDER_EMAIL
+        sync: false
+      - key: ORDER_NOTIFY_OWNER_EMAIL
+        sync: false
+
+databases:
+  - name: chuccamau-yensao-db
+    plan: free
+    region: singapore
+    postgresMajorVersion: "16"

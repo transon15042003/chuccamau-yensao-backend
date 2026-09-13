@@ -247,50 +247,50 @@ Làm phase theo thứ tự. Đừng deploy (Phase 6) trước khi Phase 0–2 xa
 
 ## Phase 5 — Khách hàng & tài khoản
 
-### Việc cần làm
+### Việc đã / cần làm
 
-- [ ] Customer auth email/password
-- [ ] Sổ địa chỉ
-- [ ] Lịch sử đơn đăng nhập
-- [ ] (Tuỳ chọn) OTP / social
+- [x] Customer auth email/password — UI `/account/login` · `/account/register`
+- [x] Sổ địa chỉ — `/account/addresses` + provinces API
+- [x] Lịch sử đơn — `/account/orders` (`listOrders` + JWT)
+- [x] Nav «TÀI KHOẢN» · fix `signout` → `/account/login`
+- [ ] (Defer) OTP / social login
 
 ### Setup Phase 5
 
-**Mục tiêu:** Khách đăng ký/đăng nhập; xem đơn của mình; guest cart gắn vào account sau login.
+**Mục tiêu:** Đăng ký/đăng nhập; xem đơn; sổ địa chỉ; guest checkout vẫn chạy.
 
-1. CORS + cookie: `STORE_CORS` / `AUTH_CORS` đúng origin FE; cùng site hoặc proxy để cookie session.
-2. FE dùng `src/lib/data/customer.ts` với backend auth endpoints.
-3. Sau login: gọi API transfer/associate cart (theo Medusa customer).
-4. Trang lịch sử: `GET /store/orders` **có** session customer — không dùng order id người khác.
-5. Kiểm tra: guest checkout vẫn chạy; login → thấy đúng đơn của email đó.
+1. Backend đang chạy (`yarn dev`); CORS đã có `http://localhost:3000`.
+2. Storefront `.env.local` đủ Medusa URL + publishable key.
+3. Mở `http://localhost:3000/account/register` → tạo tài khoản.
+4. Vào **Tài khoản** → **Đơn hàng** / **Sổ địa chỉ**.
+5. Guest đặt COD không login vẫn OK; sau login, `transferCart` gắn cart guest (nếu còn).
 
 ---
 
 ## Phase 6 — Deploy & môi trường
 
-### Việc cần làm
+### Việc đã / cần làm
 
-- [ ] Postgres managed
-- [ ] Deploy Medusa (`0.0.0.0:$PORT`)
-- [ ] Secrets production
-- [ ] CORS production
-- [ ] Storefront staging + prod env
-- [ ] Backup + restore drill
-- [ ] Health check / logs
-- [ ] (Tuỳ chọn) Redis
+- [x] Chọn đường deploy: **Render Blueprint** (`render.yaml`)
+- [ ] Apply Blueprint trên dashboard (Postgres + Web)
+- [ ] Secrets / CORS production sau khi có URL service
+- [ ] Seed + publishable key → storefront prod
+- [ ] Backup / health / (tuỳ chọn) Redis
 
 ### Setup Phase 6
 
-**Mục tiêu:** Shop chạy trên HTTPS public, thanh toán + mail + Admin hoạt động.
+**Cách A — Render Blueprint**  
+1. Dashboard Render → **New → Blueprint** → repo `chuccamau-yensao-backend`, branch `feat/medusa-backend-mvp`, file `render.yaml`.  
+2. Điền `STORE_CORS`, `AUTH_CORS`, `STORE_PUBLIC_URL`, `MEDUSA_BACKEND_URL`.  
+3. Apply → đợi Postgres + Web. Shell: `medusa user` rồi `yarn seed`.  
+4. Copy `pk_…` vào storefront prod env.
 
-1. Tạo Postgres managed; set `DATABASE_URL` trên host Medusa.
-2. Deploy Medusa (Render/Railway/Fly…): start command migrate rồi `medusa start`; bind `0.0.0.0` + `$PORT`.
-3. Secrets trên dashboard host (không commit): JWT, COOKIE, SendGrid, VNPay/MoMo, DB.
-4. `STORE_CORS` / `ADMIN_CORS` / `AUTH_CORS` = domain thật.
-5. Storefront env prod: backend URL HTTPS + publishable key **prod**.
-6. Payment return/IPN + SendGrid webhook domain = URL prod.
-7. Health route / logs; lịch backup DB; thử restore 1 lần trên staging.
+**Cách B — Supabase Postgres + Render Web**  
+1. Tạo project Supabase (cost confirm trước).  
+2. `DATABASE_URL` (`sslmode=require`) → env Web Service.  
+3. Build/start như `docs/deploy-render.md`.
 
+**MCP Cursor:** Render — nếu `list_workspaces` = unauthorized, mở Settings → MCP → Render → đăng nhập lại chọn workspace.
 ---
 
 ## Phase 7 — Chất lượng & bảo mật
@@ -333,4 +333,4 @@ Chỉ bắt đầu khi Phase 0–6 ổn định trên production. Mỗi mục c�
 2. Ghi ngắn trong PR khi đóng phase.  
 3. Scope mới → đúng phase; không nhét vào MVP đã đóng.
 
-**Cập nhật:** 2026-09-14 — mục **Setup** đầy đủ từng phase; Phase 4 catalog sync + collection + ảnh.
+**Cập nhật:** 2026-09-14 — Phase 5 account UI; Phase 6 render.yaml + hướng dẫn MCP.
