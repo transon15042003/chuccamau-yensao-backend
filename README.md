@@ -1,78 +1,67 @@
-> ⚠️ This repository is now deprecated. Use the [dtc-starter](https://github.com/medusajs/dtc-starter) instead.
+# Chúc Cà Mau Yến Sào — Medusa backend
 
-<p align="center">
-  <a href="https://www.medusajs.com">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/59018053/229103275-b5e482bb-4601-46e6-8142-244f531cebdb.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg">
-    <img alt="Medusa logo" src="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg">
-    </picture>
-  </a>
-</p>
-<h1 align="center">
-  Medusa
-</h1>
+Medusa v2.8.4 + Postgres for the `chuccamau-yensao` storefront.
 
-<h4 align="center">
-  <a href="https://docs.medusajs.com">Documentation</a> |
-  <a href="https://www.medusajs.com">Website</a>
-</h4>
+## Prerequisites
 
-<p align="center">
-  Building blocks for digital commerce
-</p>
-<p align="center">
-  <a href="https://github.com/medusajs/medusa/blob/master/CONTRIBUTING.md">
-    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="PRs welcome!" />
-  </a>
-    <a href="https://www.producthunt.com/posts/medusa"><img src="https://img.shields.io/badge/Product%20Hunt-%231%20Product%20of%20the%20Day-%23DA552E" alt="Product Hunt"></a>
-  <a href="https://discord.gg/xpCwq3Kfn8">
-    <img src="https://img.shields.io/badge/chat-on%20discord-7289DA.svg" alt="Discord Chat" />
-  </a>
-  <a href="https://twitter.com/intent/follow?screen_name=medusajs">
-    <img src="https://img.shields.io/twitter/follow/medusajs.svg?label=Follow%20@medusajs" alt="Follow @medusajs" />
-  </a>
-</p>
+- Node ≥ 20
+- Yarn via Corepack (`corepack enable`)
+- PostgreSQL (local service **or** Docker Compose below)
+- DB role/database: `medusa` / `medusa` (see `scripts/bootstrap-medusa-db.ps1` if needed)
 
-## Compatibility
+## Quick start
 
-This starter is compatible with versions >= 2 of `@medusajs/medusa`. 
+```bash
+# 1) Postgres (pick one)
+docker compose up -d
+# or use local PostgreSQL 18 with DATABASE_URL below
 
-## Getting Started
+# 2) Env
+cp .env.template .env
+# DATABASE_URL=postgres://medusa:medusa@127.0.0.1:5432/medusa
 
-Visit the [Quickstart Guide](https://docs.medusajs.com/learn/installation) to set up a server.
+# 3) Install + migrate + seed
+corepack yarn install
+corepack yarn medusa db:migrate
+corepack yarn seed
+# Copy the publishable key printed in seed logs (pk_...)
 
-Visit the [Docs](https://docs.medusajs.com/learn/installation#get-started) to learn more about our system requirements.
+# 4) Dev server
+corepack yarn dev
+# Store API http://localhost:9000  Admin http://localhost:9000/app
+```
 
-## What is Medusa
+## Smoke check
 
-Medusa is a set of commerce modules and tools that allow you to build rich, reliable, and performant commerce applications without reinventing core commerce logic. The modules can be customized and used to build advanced ecommerce stores, marketplaces, or any product that needs foundational commerce primitives. All modules are open-source and freely available on npm.
+```bash
+# terminal A
+corepack yarn dev
 
-Learn more about [Medusa’s architecture](https://docs.medusajs.com/learn/introduction/architecture) and [commerce modules](https://docs.medusajs.com/learn/fundamentals/modules/commerce-modules) in the Docs.
+# terminal B
+PUBLISHABLE_API_KEY=pk_... corepack yarn smoke
+```
 
-## Build with AI Agents
+Expect: `smoke ok` with ≥6 categories and products > 0; region `vn`; payment `pp_system_default`.
 
-### Claude Code Plugin
+## Storefront wiring
 
-If you use AI agents like Claude Code, check out the [medusa-dev Claude Code plugin](https://github.com/medusajs/medusa-claude-plugins).
+In `chuccamau-yensao` (prefer `.env.local` so remote `.env.dev` stays untouched):
 
-### Other Agents
+```env
+NEXT_PUBLIC_MEDUSA_BACKEND_URL=http://localhost:9000
+NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY=<paste pk_ from seed>
+NEXT_PUBLIC_DEFAULT_COUNTRY_CODE=vn
+```
 
-If you use AI agents other than Claude Code, copy the [skills directory](https://github.com/medusajs/medusa-claude-plugins/tree/main/plugins/medusa-dev/skills) into your agent's relevant `skills` directory.
+## Troubleshooting
 
-### MCP Server
+- **CORS / 401**: check `STORE_CORS=http://localhost:3000` and publishable key
+- **DB auth failed**: ensure role `medusa` exists; run bootstrap script elevated if needed
+- **Medusa restarts in a loop**: do not write logs under the project while `medusa develop` is running (file watcher)
+- **Seed twice**: safe — skips existing categories/products by handle
 
-You can also add the MCP server `https://docs.medusajs.com/mcp` to your AI agents to answer questions related to Medusa. The `medusa-dev` Claude Code plugin includes this MCP server by default.
+## Notes
 
-## Community & Contributions
-
-The community and core team are available in [GitHub Discussions](https://github.com/medusajs/medusa/discussions), where you can ask for support, discuss roadmap, and share ideas.
-
-Join our [Discord server](https://discord.com/invite/medusajs) to meet other community members.
-
-## Other channels
-
-- [GitHub Issues](https://github.com/medusajs/medusa/issues)
-- [Twitter](https://twitter.com/medusajs)
-- [LinkedIn](https://www.linkedin.com/company/medusajs)
-- [Medusa Blog](https://medusajs.com/blog/)
+- Catalog seed reads `seed/data/` (copied from storefront JSON)
+- Image URLs stay storefront-relative (`/images/...`)
+- Payment MVP: `pp_system_default` (COD/manual)

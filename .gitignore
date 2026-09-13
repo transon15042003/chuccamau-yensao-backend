@@ -32,3 +32,4 @@ scripts/*.done
 scripts/*.exit
 scripts/*.body
 .medusa
+.publishable-key
