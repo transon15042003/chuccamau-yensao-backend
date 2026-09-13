@@ -4,7 +4,17 @@ export type MapProductContext = {
   categoryIdByHandle: Map<string, string>;
   shippingProfileId: string;
   salesChannelId: string;
+  /** Origin for relative /images/... paths (e.g. http://localhost:3000). */
+  storePublicUrl?: string;
 };
+
+function absolutizeImageUrl(url: string, storePublicUrl?: string): string {
+  if (!url) return url;
+  if (/^https?:\/\//i.test(url)) return url;
+  const base = (storePublicUrl || "").replace(/\/$/, "");
+  if (!base) return url;
+  return url.startsWith("/") ? `${base}${url}` : `${base}/${url}`;
+}
 
 export type MedusaSeedProductInput = {
   title: string;
@@ -45,10 +55,13 @@ export function mapSeedProductToMedusaInput(
   };
   if (typeof product.isNew === "boolean") metadata.isNew = product.isNew;
   if (typeof product.totalSold === "number") metadata.totalSold = product.totalSold;
+  if (product.name) metadata.title = product.name;
+  if (product.description) metadata.description = product.description.slice(0, 160);
 
   for (const variant of product.variants) {
-    const url = variant.thumbnail || product.thumbnail;
-    if (!url) continue;
+    const raw = variant.thumbnail || product.thumbnail;
+    if (!raw) continue;
+    const url = absolutizeImageUrl(raw, ctx.storePublicUrl);
     const existing = images.findIndex((i) => i.url === url);
     const rank =
       existing >= 0 ? existing + 1 : (images.push({ url }), images.length);

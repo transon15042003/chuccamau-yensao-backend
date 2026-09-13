@@ -50,6 +50,17 @@ corepack yarn sync:inventory   # stock from seed JSON by SKU
 corepack yarn verify:stock     # assert DB matches JSON
 ```
 
+### Catalog & images (Phase 4)
+
+```bash
+# .env: STORE_PUBLIC_URL=http://localhost:3000
+corepack yarn sync:catalog   # upsert products + collection san-pham-noi-bat
+corepack yarn sync:images    # optional: copy FE public/images → Medusa static/
+```
+
+After `sync:catalog`, product `images[].url` are absolute (`STORE_PUBLIC_URL` + `/images/...`).  
+After `sync:images`, URLs point at Medusa `http://localhost:9000/static/...`.
+
 > Note: OOS at complete is blocked by `src/api/middlewares.ts` — prove with `yarn verify:oos`.
 
 ## Checkout COD proof

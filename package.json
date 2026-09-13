@@ -25,6 +25,8 @@
     "checkout:online": "node scripts/checkout-online.mjs",
     "fix:inventory": "medusa exec ./src/scripts/fix-inventory.ts",
     "sync:inventory": "medusa exec ./src/scripts/sync-inventory-from-seed.ts",
+    "sync:catalog": "medusa exec ./src/scripts/sync-catalog-from-seed.ts",
+    "sync:images": "medusa exec ./src/scripts/sync-images.ts",
     "verify:oos": "node scripts/verify-oos-with-db.mjs",
     "verify:stock": "node scripts/verify-stock-sync.mjs",
     "admin:orders": "node scripts/admin-list-orders.mjs",

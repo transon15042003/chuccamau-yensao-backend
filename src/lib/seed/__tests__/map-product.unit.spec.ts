@@ -67,4 +67,16 @@ describe("mapSeedProductToMedusaInput", () => {
       prices: [{ amount: 450000, currency_code: "vnd" }],
     });
   });
+
+  it("absolutizes image urls when storePublicUrl set", () => {
+    const out = mapSeedProductToMedusaInput(sample, {
+      categoryIdByHandle: new Map([["yen-sao-tho", "cat_123"]]),
+      shippingProfileId: "sp_1",
+      salesChannelId: "sc_1",
+      storePublicUrl: "http://localhost:3000",
+    });
+    expect(out.images?.[0]?.url).toBe(
+      "http://localhost:3000/images/products/yen-sao-tho/chan-yen-tho-25g.jpg"
+    );
+  });
 });

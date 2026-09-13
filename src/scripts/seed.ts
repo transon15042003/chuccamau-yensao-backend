@@ -395,6 +395,10 @@ export default async function seed({ container }: ExecArgs) {
       categoryIdByHandle,
       shippingProfileId: shippingProfile!.id,
       salesChannelId: defaultSalesChannel[0].id,
+      storePublicUrl:
+        process.env.STORE_PUBLIC_URL ||
+        process.env.STORE_URL ||
+        "http://localhost:3000",
     });
 
     await createProductsWorkflow(container).run({
