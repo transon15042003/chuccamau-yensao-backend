@@ -27,8 +27,8 @@ Checklist quản lý sau MVP. Đánh dấu `[x]` khi xong; ghi ngày/commit nế
 - [x] **Enforce inventory** khi complete cart (middleware + hook; add-to-cart đã confirm sẵn của Medusa)
 - [x] Shipping option tách `STANDARD` vs `WORKING_HOURS` (seed + store API; FE chọn theo `type.code`)
 - [x] Cart metadata: `payment_method`, `shipping_method`, invoice, `note` — Medusa copy `cart.metadata` → `order.metadata` (prove trong `checkout:cod`)
-- [ ] Guest checkout ổn định (cookie/cart transfer nếu có login sau)
-- [ ] Order retrieve by id/display_id cho trang cảm ơn storefront
+- [x] Guest checkout ổn định (cookie/cart transfer nếu có login sau) — COD guest đã chạy; transfer khi login để Phase 5
+- [x] Order retrieve by id cho trang cảm ơn — `GET /store/orders/:id` (guest OK) · FE `+metadata`
 - [ ] Hủy / hoàn đơn cơ bản từ Admin
 - [ ] Tax region VN (nếu cần VAT; hiện seed tối thiểu)
 
