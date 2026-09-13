@@ -14,15 +14,17 @@ Checklist quản lý sau MVP. Đánh dấu `[x]` khi xong; ghi ngày/commit nế
 - [x] Seed catalog từ JSON storefront
 - [x] Smoke: regions, categories, products, payment provider
 - [x] **Checkout COD end-to-end** (cart → address → shipping → payment session → order) — `scripts/checkout-cod.mjs` · order `display_id: 1`
-- [ ] Tạo admin user Medusa (`/app`) và xem order trên Admin
-- [ ] Xác nhận inventory theo SKU (stock đúng / hết hàng chặn add-to-cart) — *đã backfill 64 levels; còn tinh chỉnh stock từ JSON*
-- [ ] README onboarding chạy được trên máy mới (Docker **hoặc** Postgres local)
+- [x] Tạo admin user Medusa (`/app`) và xem order trên Admin — `admin@chuccamau.local` · `yarn admin:orders`
+- [x] Đồng bộ inventory theo SKU từ JSON — `yarn sync:inventory` · `yarn verify:stock` (64/64)
+- [ ] Bật chặn hết hàng lúc complete order (Medusa hiện vẫn complete khi `stocked_quantity=0` — chuyển Phase 1)
+- [x] README onboarding (Postgres local **hoặc** Docker Compose)
 - [ ] Commit/push nhánh `feat/medusa-backend-mvp` + mở PR
 
 ---
 
 ## Phase 1 — Checkout & fulfillment cứng
 
+- [ ] **Enforce inventory** khi complete cart / add-to-cart (cấu hình module inventory + regression `verify:oos`)
 - [ ] Shipping option tách `STANDARD` vs `WORKING_HOURS` (không chỉ metadata)
 - [ ] Cart metadata: `payment_method`, `shipping_method`, invoice, `note` — map rõ sang order
 - [ ] Guest checkout ổn định (cookie/cart transfer nếu có login sau)

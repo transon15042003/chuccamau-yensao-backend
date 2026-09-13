@@ -31,6 +31,27 @@ corepack yarn dev
 # Store API http://localhost:9000  Admin http://localhost:9000/app
 ```
 
+### Admin (local)
+
+```bash
+# already created on this machine; recreate with:
+corepack yarn medusa user -e admin@chuccamau.local -p 'LocalDev_ChangeMe1!'
+
+# list orders via API (server must be running)
+corepack yarn admin:orders
+```
+
+Open `http://localhost:9000/app` and sign in with the same email/password. Change the password after first login.
+
+### Inventory
+
+```bash
+corepack yarn sync:inventory   # stock from seed JSON by SKU
+corepack yarn verify:stock     # assert DB matches JSON
+```
+
+> Note: out-of-stock does **not** yet block `cart.complete` in this setup; tracked in Phase 1 of `docs/roadmap-checklist.md`.
+
 ## Checkout COD proof
 
 ```bash
