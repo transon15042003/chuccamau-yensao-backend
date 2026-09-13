@@ -274,8 +274,8 @@ Làm phase theo thứ tự. Đừng deploy (Phase 6) trước khi Phase 0–2 xa
 - [x] Free path: **Neon** (Postgres) + **Render Free Web Service** (Medusa) — `docs/deploy-free.md`
 - [x] Neon project `chuccamau-yensao-medusa` + migrate + seed
 - [x] Render Free Web Service `chuccamau-yensao-backend` (`srv-dajfm37qj5pc73der1s0`, Singapore)
-- [ ] Deploy xanh + `/health` OK
-- [ ] Admin user trên Render shell + FE publishable key
+- [x] Deploy live + `/health` OK (`https://chuccamau-yensao-backend.onrender.com`)
+- [ ] Admin user trên Render shell + FE publishable key / CORS prod
 - [ ] (Tuỳ chọn) Redis / backup
 
 ### Setup Phase 6
