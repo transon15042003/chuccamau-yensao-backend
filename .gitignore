@@ -34,3 +34,4 @@ scripts/*.exit
 scripts/*.body
 .medusa
 .publishable-key
+.env.neon.local

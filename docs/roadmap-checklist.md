@@ -273,9 +273,10 @@ Làm phase theo thứ tự. Đừng deploy (Phase 6) trước khi Phase 0–2 xa
 
 - [x] Hướng free-forever: **Neon** (Postgres) + **Northflank** (Medusa) — `docs/deploy-free.md` + `Dockerfile`
 - [x] Bỏ Render Blueprint / Supabase cho Phase 6 (Render DB hết hạn 30 ngày; Supabase hết slot free)
-- [ ] Tạo Neon project + `DATABASE_URL`
-- [ ] Deploy Medusa lên Northflank (hoặc Oracle Always Free nếu cần 24/7)
-- [ ] Secrets / CORS + seed + publishable key → FE
+- [x] Tạo Neon project `chuccamau-yensao-medusa` (`morning-waterfall-43478669`, Singapore)
+- [x] Migrate + seed trên Neon (catalog sẵn)
+- [ ] Deploy Medusa lên Northflank (trỏ `DATABASE_URL` Neon)
+- [ ] Secrets / CORS + publishable key → FE
 - [ ] (Tuỳ chọn) Redis / backup
 
 ### Setup Phase 6
