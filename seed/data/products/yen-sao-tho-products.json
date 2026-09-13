@@ -1,0 +1,203 @@
+[
+  {
+    "id": "chan-yen-tho",
+    "name": "Chân Yến Thô",
+    "slug": "chan-yen-tho",
+    "price": 450000,
+    "thumbnail": "/images/products/yen-sao-tho/chan-yen-tho-100g.jpg",
+    "description": "Chân yến thô",
+    "categories": ["yen-sao-tho"],
+    "ingredient": [
+      "Nguyên chất 100%, giữ trọn hình dáng tự nhiên, chưa qua chế biến.",
+      "Giàu collagen, protein và axit amin, tốt cho da, xương khớp và hệ miễn dịch.",
+      "Nguyên chất 100%, giữ trọn hình dáng tự nhiên, chưa qua chế biến.",
+      "Giàu collagen, protein và axit amin, tốt cho da, xương khớp và hệ miễn dịch."
+    ],
+    "specs": [
+      {
+        "key": "size",
+        "value": ["25g", "50g", "100g"]
+      },
+      {
+        "key": "savour",
+        "value": ["chân yến thô"]
+      }
+    ],
+    "isNew": false,
+    "total": 312,
+    "totalSold": 201,
+    "createdAt": "2024-05-11T00:00:00.000Z",
+    "variants": [
+      {
+        "sku": "chan-tho-25g",
+        "name": "Chân yến thô - 25 gram",
+        "specs": {
+          "size": "25g",
+          "savour": "chân yến thô"
+        },
+        "price": 450000,
+        "stock": 112,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tho/chan-yen-tho-25g.jpg"
+      },
+      {
+        "sku": "chan-tho-50g",
+        "name": "Chân yến thô - 50 gram",
+        "specs": {
+          "size": "50g",
+          "savour": "chân yến thô"
+        },
+        "price": 900000,
+        "stock": 45,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tho/chan-yen-tho-50g.jpg"
+      },
+      {
+        "sku": "chan-tho-100g",
+        "name": "Chân yến thô - 100 gram",
+        "specs": {
+          "size": "100g",
+          "savour": "chân yến thô"
+        },
+        "price": 1800000,
+        "stock": 67,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tho/chan-yen-tho-100g.jpg"
+      }
+    ]
+  },
+  {
+    "id": "to-yen-tho-loai-1",
+    "name": "Tổ Yến Thô Loại 1",
+    "slug": "to-yen-tho-loai-1",
+    "price": 500000,
+    "thumbnail": "/images/products/yen-sao-tho/yen-tho-loai-1-100g.jpg",
+    "description": "Yến Thô Loại 1",
+    "categories": ["yen-sao-tho"],
+    "ingredient": [
+      "Sợi yến nguyên chất, tổ đẹp, dinh dưỡng vượt trội.",
+      "100% yến nguyên tổ, chưa qua chế biến, giữ trọn hương vị tự nhiên.",
+      "Chế biến dễ dàng: Ngâm mềm, làm sạch rồi chưng cùng táo đỏ, đường phèn...",
+      "Bảo quản dễ dàng, để nơi khô ráo hoặc ngăn đông sau khi làm sạch."
+    ],
+    "specs": [
+      {
+        "key": "size",
+        "value": ["25g", "50g", "100g"]
+      },
+      {
+        "key": "savour",
+        "value": ["yến thô loại 1"]
+      }
+    ],
+    "isNew": false,
+    "total": 312,
+    "totalSold": 201,
+    "createdAt": "2024-05-11T00:00:00.000Z",
+    "variants": [
+      {
+        "sku": "yen-tho-loai-1-25g",
+        "name": "Yến thô loại 1 - 25 gram",
+        "specs": {
+          "size": "25g",
+          "savour": "yến thô loại 1"
+        },
+        "price": 500000,
+        "stock": 112,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tho/yen-tho-loai-1-25g.jpg"
+      },
+      {
+        "sku": "yen-tho-loai-1-50g",
+        "name": "Yến thô loại 1 - 50 gram",
+        "specs": {
+          "size": "50g",
+          "savour": "yến thô loại 1"
+        },
+        "price": 1000000,
+        "stock": 112,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tho/yen-tho-loai-1-50g.jpg"
+      },
+      {
+        "sku": "yen-tho-loai-1-100g",
+        "name": "Yến thô loại 1 - 100 gram",
+        "specs": {
+          "size": "100g",
+          "savour": "yến thô loại 1"
+        },
+        "price": 2000000,
+        "stock": 112,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tho/yen-tho-loai-1-100g.jpg"
+      }
+    ]
+  },
+  {
+    "id": "to-yen-tho-loai-2",
+    "name": "Tổ Yến Thô Loại 2",
+    "slug": "to-yen-tho-loai-2",
+    "price": 375000,
+    "thumbnail": "/images/products/yen-sao-tho/yen-tho-loai-2-100g.jpg",
+    "description": "Yến Thô Loại 2",
+    "categories": ["yen-sao-tho"],
+    "ingredient": [
+      "Sợi yến nguyên chất, tổ đều, dinh dưỡng vượt trội.",
+      "100% yến thô nguyên tổ, chưa qua chế biến, giữ trọn hương vị tự nhiên.",
+      "Chế biến đơn giản tại nhà: Ngâm nở, làm sạch, chưng cùng táo đỏ, đường phèn hoặc nấu súp, cháo…",
+      "Bảo quản linh hoạt: Để nơi khô ráo hoặc bảo quản ngăn đông sau khi đã nhặt sạch."
+    ],
+    "specs": [
+      {
+        "key": "size",
+        "value": ["25g", "50g", "100g"]
+      },
+      {
+        "key": "savour",
+        "value": ["yến thô loại 2"]
+      }
+    ],
+    "isNew": false,
+    "total": 312,
+    "totalSold": 201,
+    "createdAt": "2024-05-11T00:00:00.000Z",
+    "variants": [
+      {
+        "sku": "yen-tho-loai-2-25g",
+        "name": "Yến thô loại 2 - 25 gram",
+        "specs": {
+          "size": "25g",
+          "savour": "yến thô loại 2"
+        },
+        "price": 375000,
+        "stock": 112,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tho/yen-tho-loai-2-25g.jpg"
+      },
+      {
+        "sku": "yen-tho-loai-2-50g",
+        "name": "Yến thô loại 2 - 50 gram",
+        "specs": {
+          "size": "50g",
+          "savour": "yến thô loại 2"
+        },
+        "price": 750000,
+        "stock": 112,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tho/yen-tho-loai-2-50g.jpg"
+      },
+      {
+        "sku": "yen-tho-loai-2-100g",
+        "name": "Yến thô loại 2 - 100 gram",
+        "specs": {
+          "size": "100g",
+          "savour": "yến thô loại 2"
+        },
+        "price": 1500000,
+        "stock": 112,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tho/yen-tho-loai-2-100g.jpg"
+      }
+    ]
+  }
+]

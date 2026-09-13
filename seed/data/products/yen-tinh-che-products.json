@@ -1,0 +1,361 @@
+[
+  {
+    "id": "chan-yen-rut-long",
+    "name": "Chân Yến Rút Lông",
+    "slug": "chan-yen-rut-long",
+    "price": 750000,
+    "thumbnail": "/images/products/yen-sao-tinh-che/chan-yen-rut-long-100.jpg",
+    "description": "Chân yến rút lông",
+    "categories": ["yen-sao-tinh-che"],
+    "ingredient": [
+      "Nguyên chất 100%, không đường, không độn, không hóa chất tẩy trắng.",
+      "Công Nghệ Chế Biến Hiện Đại: Sử dụng công nghệ tinh chế hiện đại, giữ trọn vẹn hàm lượng dinh dưỡng mà không làm mất đi hương vị đặc trưng"
+    ],
+    "specs": [
+      {
+        "key": "size",
+        "value": ["25g", "50g", "100g"]
+      },
+      {
+        "key": "savour",
+        "value": ["chân yến"]
+      }
+    ],
+    "isNew": false,
+    "total": 312,
+    "totalSold": 201,
+    "createdAt": "2024-05-11T00:00:00.000Z",
+    "variants": [
+      {
+        "sku": "chanyen-25g",
+        "name": "Chân yến rút lông - 25 gram",
+        "specs": {
+          "size": "25g",
+          "savour": "chân yến"
+        },
+        "price": 750000,
+        "stock": 112,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tinh-che/chan-yen-rut-long-25.jpg"
+      },
+      {
+        "sku": "chanyen-50g",
+        "name": "Chân yến rút lông - 50 gram",
+        "specs": {
+          "size": "50g",
+          "savour": "chân yến"
+        },
+        "price": 1500000,
+        "stock": 45,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tinh-che/chan-yen-rut-long-50.jpg"
+      },
+      {
+        "sku": "chanyen-100g",
+        "name": "Chân yến rút lông - 100 gram",
+        "specs": {
+          "size": "100g",
+          "savour": "chân yến"
+        },
+        "price": 3000000,
+        "stock": 67,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tinh-che/chan-yen-rut-long-100.jpg"
+      }
+    ]
+  },
+  {
+    "id": "vien-yen-baby",
+    "name": "Viên Yến baby",
+    "slug": "vien-yen-baby",
+    "price": 450000,
+    "thumbnail": "/images/products/yen-sao-tinh-che/set-10-goi-yen-baby-vien.jpg",
+    "description": "Viên yến",
+    "categories": ["yen-sao-tinh-che"],
+    "ingredient": [
+      "Thành phần: Nguyên chất 100%, không đường, không độn, không hóa chất tẩy trắng.",
+      "Định lượng: 10 túi zip"
+    ],
+    "specs": [
+      {
+        "key": "size",
+        "value": ["10 viên"]
+      },
+      {
+        "key": "savour",
+        "value": ["viên yến"]
+      }
+    ],
+    "isNew": false,
+    "total": 312,
+    "totalSold": 201,
+    "createdAt": "2024-05-11T00:00:00.000Z",
+    "variants": [
+      {
+        "sku": "10vienyen",
+        "name": "Viên yến baby - 10 viên",
+        "specs": {
+          "size": "10 viên",
+          "savour": "viên yến"
+        },
+        "price": 450000,
+        "stock": 112,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tinh-che/set-10-goi-yen-baby-vien.jpg"
+      }
+    ]
+  },
+  {
+    "id": "to-yen-soi-tinh-cao-cap",
+    "name": "Tổ Yến Sợi Tinh Cao Cấp",
+    "slug": "to-yen-soi-tinh-cao-cap",
+    "price": 2000000,
+    "thumbnail": "/images/products/yen-sao-tinh-che/soi-tinh-cao-cap-100.jpg",
+    "description": "Sợi tinh cao cấp",
+    "categories": ["yen-sao-tinh-che"],
+    "ingredient": [
+      "Chất lượng cao: Sợi yến sạch, nguyên vẹn, không tạp chất.",
+      "Giữ trọn dưỡng chất: Cung cấp protein, axit amin và khoáng chất cần thiết cho sức khỏe.",
+      "Tiện lợi & dễ chế biến: Lý tưởng để nấu cháo yến, chè yến, thạch yến, súp dinh dưỡng mỗi ngày."
+    ],
+    "specs": [
+      {
+        "key": "size",
+        "value": ["50g", "100g"]
+      },
+      {
+        "key": "savour",
+        "value": ["sợi tinh"]
+      }
+    ],
+    "isNew": false,
+    "total": 312,
+    "totalSold": 201,
+    "createdAt": "2024-05-11T00:00:00.000Z",
+    "variants": [
+      {
+        "sku": "soitinh-50g",
+        "name": "Tổ yến sợi tinh cao cấp - 50 gram",
+        "specs": {
+          "size": "50g",
+          "savour": "sợi tinh"
+        },
+        "price": 2000000,
+        "stock": 112,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tinh-che/soi-tinh-cao-cap-50.jpg"
+      },
+      {
+        "sku": "soitinh-100g",
+        "name": "Tổ yến sợi tinh cao cấp - 100 gram",
+        "specs": {
+          "size": "100g",
+          "savour": "sợi tinh"
+        },
+        "price": 4000000,
+        "stock": 45,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tinh-che/soi-tinh-cao-cap-100.jpg"
+      }
+    ]
+  },
+  {
+    "id": "to-yen-tinh-che-loai-1",
+    "name": "Tổ Yến Tinh Chế Loại 1",
+    "slug": "to-yen-tinh-che-loai-1",
+    "price": 800000,
+    "thumbnail": "/images/products/yen-sao-tinh-che/yen-tinh-che-loai-1-100g.jpg",
+    "description": "Tổ yến tinh chế loại 1",
+    "categories": ["yen-sao-tinh-che"],
+    "ingredient": [
+      "Nguồn gốc tuyển chọn: Được tinh chế từ tổ yến già, to và dày, chứa hàm lượng dưỡng chất vượt trội.",
+      "Tinh khiết tuyệt đối: Loại bỏ hoàn toàn lông và tạp chất bằng quy trình thủ công tỉ mỉ.",
+      "Sợi yến chất lượng cao: Dày, dai, giòn, nở đều sau khi ngâm, giữ nguyên cấu trúc khi chưng."
+    ],
+    "specs": [
+      {
+        "key": "size",
+        "value": ["25g", "50g", "100g"]
+      },
+      {
+        "key": "savour",
+        "value": ["loại 1"]
+      }
+    ],
+    "isNew": false,
+    "total": 312,
+    "totalSold": 201,
+    "createdAt": "2024-05-11T00:00:00.000Z",
+    "variants": [
+      {
+        "sku": "loai1-25g",
+        "name": "Tổ yến tinh chế loại 1 - 25 gram",
+        "specs": {
+          "size": "25g",
+          "savour": "loại 1"
+        },
+        "price": 800000,
+        "stock": 112,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tinh-che/yen-tinh-che-loai-1-25g.jpg"
+      },
+      {
+        "sku": "loai1-50g",
+        "name": "Tổ yến tinh chế loại 1 - 50 gram",
+        "specs": {
+          "size": "50g",
+          "savour": "loại 1"
+        },
+        "price": 1600000,
+        "stock": 45,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tinh-che/yen-tinh-che-loai-1-50g.jpg"
+      },
+      {
+        "sku": "loai1-100g",
+        "name": "Tổ yến tinh chế loại 1 - 100 gram",
+        "specs": {
+          "size": "100g",
+          "savour": "loại 1"
+        },
+        "price": 3200000,
+        "stock": 67,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tinh-che/yen-tinh-che-loai-1-100g.jpg"
+      }
+    ]
+  },
+  {
+    "id": "to-yen-tinh-che-loai-2",
+    "name": "Tổ Yến Tinh Chế Loại 2",
+    "slug": "to-yen-tinh-che-loai-2",
+    "price": 700000,
+    "thumbnail": "/images/products/yen-sao-tinh-che/yen-tinh-che-loai-2-100g.jpg",
+    "description": "Tổ yến tinh chế loại 2",
+    "categories": ["yen-sao-tinh-che"],
+    "ingredient": [
+      "Sợi yến mảnh, tự nhiên: Màu trắng ngà nhẹ, sợi yến mềm, dai, vẫn giữ mùi vị đặc trưng sau khi chưng.",
+      "Giữ trọn dưỡng chất: Cung cấp protein, axit amin và khoáng chất cần thiết cho sức khỏe.",
+      "Tiện lợi & dễ chế biến: Lý tưởng để nấu cháo yến, chè yến, thạch yến, súp dinh dưỡng mỗi ngày."
+    ],
+    "specs": [
+      {
+        "key": "size",
+        "value": ["25g", "50g", "100g"]
+      },
+      {
+        "key": "savour",
+        "value": ["loại 2"]
+      }
+    ],
+    "isNew": false,
+    "total": 312,
+    "totalSold": 201,
+    "createdAt": "2024-05-11T00:00:00.000Z",
+    "variants": [
+      {
+        "sku": "loai2-25g",
+        "name": "Tổ yến tinh chế loại 2 - 25 gram",
+        "specs": {
+          "size": "25g",
+          "savour": "loại 2"
+        },
+        "price": 700000,
+        "stock": 112,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tinh-che/yen-tinh-che-loai-2-25g.jpg"
+      },
+      {
+        "sku": "loai2-50g",
+        "name": "Tổ yến tinh chế loại 2 - 50 gram",
+        "specs": {
+          "size": "50g",
+          "savour": "loại 2"
+        },
+        "price": 1400000,
+        "stock": 45,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tinh-che/yen-tinh-che-loai-2-50g.jpg"
+      },
+      {
+        "sku": "loai2-100g",
+        "name": "Tổ yến tinh chế loại 2 - 100 gram",
+        "specs": {
+          "size": "100g",
+          "savour": "loại 2"
+        },
+        "price": 2800000,
+        "stock": 67,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tinh-che/yen-tinh-che-loai-2-100g.jpg"
+      }
+    ]
+  },
+  {
+    "id": "to-yen-tinh-che-vun",
+    "name": "Tổ Yến Tinh Chế Vụn",
+    "slug": "to-yen-tinh-che-vun",
+    "price": 600000,
+    "thumbnail": "/images/products/yen-sao-tinh-che/yen-tinh-che-vun-100g.jpg",
+    "description": "Tổ yến tinh chế sợi non",
+    "categories": ["yen-sao-tinh-che"],
+    "ingredient": [
+      "Nguồn gốc tự nhiên: Được thu từ các mảnh vụn tổ yến trong quá trình khai thác và làm sạch kỹ lưỡng.",
+      "Dinh dưỡng đầy đủ: Giữ lại trọn vẹn các thành phần quý như protein, axit amin và vi khoáng, tốt cho sức khỏe toàn diện.",
+      "Tiết kiệm chi phí: Là lựa chọn lý tưởng cho người muốn dùng yến thường xuyên mà vẫn đảm bảo ngân sách.",
+      "Dễ dàng chế biến: Phù hợp với các món cháo, súp, yến chưng – đặc biệt tiện lợi cho người bận rộn."
+    ],
+    "specs": [
+      {
+        "key": "size",
+        "value": ["25g", "50g", "100g"]
+      },
+      {
+        "key": "savour",
+        "value": ["yến vụn"]
+      }
+    ],
+    "isNew": false,
+    "total": 312,
+    "totalSold": 201,
+    "createdAt": "2024-05-11T00:00:00.000Z",
+    "variants": [
+      {
+        "sku": "tinhchevun-25g",
+        "name": "Tổ yến tinh chế vụn - 25 gram",
+        "specs": {
+          "size": "25g",
+          "savour": "yến vụn"
+        },
+        "price": 600000,
+        "stock": 112,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tinh-che/yen-tinh-che-vun-25g.jpg"
+      },
+      {
+        "sku": "tinhchevun-50g",
+        "name": "Tổ yến tinh chế vụn - 50 gram",
+        "specs": {
+          "size": "50g",
+          "savour": "yến vụn"
+        },
+        "price": 1200000,
+        "stock": 45,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tinh-che/yen-tinh-che-vun-50g.jpg"
+      },
+      {
+        "sku": "tinhchevun-100g",
+        "name": "Tổ yến tinh chế vụn - 100 gram",
+        "specs": {
+          "size": "100g",
+          "savour": "yến vụn"
+        },
+        "price": 2400000,
+        "stock": 67,
+        "isActive": true,
+        "thumbnail": "/images/products/yen-sao-tinh-che/yen-tinh-che-vun-100g.jpg"
+      }
+    ]
+  }
+]
