@@ -54,8 +54,16 @@ Node: `20.x` (`.node-version` / `engines`).
 6. Env: xem `docs/render-env.template` — dán `DATABASE_URL` Neon + JWT/COOKIE.
 
 Sau deploy: URL dạng `https://chuccamau-yensao-backend.onrender.com`  
-→ cập nhật `MEDUSA_BACKEND_URL`, `ADMIN_CORS`, `MEDUSA_FILE_URL` cho khớp URL thật.  
-Shell Render: `yarn medusa user -e admin@chuccamau.local -p '…'`
+→ cập nhật `MEDUSA_BACKEND_URL`, `ADMIN_CORS`, `MEDUSA_FILE_URL` cho khớp URL thật.
+
+**Tạo admin (không cần Render Shell — Free không có Shell):** chạy trên máy local, trỏ `DATABASE_URL` = Neon (cùng DB prod):
+
+```bash
+export DATABASE_URL='postgresql://…neon…/medusa?sslmode=require'
+node .yarn/releases/yarn-4.12.0.cjs medusa user -e admin@chuccamau.local -p 'YourStrongPass1!'
+```
+
+Đăng nhập Admin: `https://chuccamau-yensao-backend.onrender.com/app`
 
 FE: publishable key từ seed Neon.
 
