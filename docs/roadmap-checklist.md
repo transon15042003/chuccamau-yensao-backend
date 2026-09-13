@@ -16,15 +16,15 @@ Checklist quản lý sau MVP. Đánh dấu `[x]` khi xong; ghi ngày/commit nế
 - [x] **Checkout COD end-to-end** (cart → address → shipping → payment session → order) — `scripts/checkout-cod.mjs` · order `display_id: 1`
 - [x] Tạo admin user Medusa (`/app`) và xem order trên Admin — `admin@chuccamau.local` · `yarn admin:orders`
 - [x] Đồng bộ inventory theo SKU từ JSON — `yarn sync:inventory` · `yarn verify:stock` (64/64)
-- [ ] Bật chặn hết hàng lúc complete order (Medusa hiện vẫn complete khi `stocked_quantity=0` — chuyển Phase 1)
+- [x] Bật chặn hết hàng lúc complete order — middleware `src/api/middlewares.ts` + hook · `yarn verify:oos` (400)
 - [x] README onboarding (Postgres local **hoặc** Docker Compose)
-- [ ] Commit/push nhánh `feat/medusa-backend-mvp` + mở PR
+- [x] Commit/push nhánh `feat/medusa-backend-mvp` + mở PR — https://github.com/transon15042003/chuccamau-yensao-backend/pull/1
 
 ---
 
 ## Phase 1 — Checkout & fulfillment cứng
 
-- [ ] **Enforce inventory** khi complete cart / add-to-cart (cấu hình module inventory + regression `verify:oos`)
+- [x] **Enforce inventory** khi complete cart (middleware + hook; add-to-cart đã confirm sẵn của Medusa)
 - [ ] Shipping option tách `STANDARD` vs `WORKING_HOURS` (không chỉ metadata)
 - [ ] Cart metadata: `payment_method`, `shipping_method`, invoice, `note` — map rõ sang order
 - [ ] Guest checkout ổn định (cookie/cart transfer nếu có login sau)
