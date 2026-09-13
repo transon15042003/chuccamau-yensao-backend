@@ -271,22 +271,21 @@ Làm phase theo thứ tự. Đừng deploy (Phase 6) trước khi Phase 0–2 xa
 
 ### Việc đã / cần làm
 
-- [x] Hướng free-forever: **Neon** (Postgres) + **Northflank** (Medusa) — `docs/deploy-free.md` + `Dockerfile`
-- [x] Bỏ Render Blueprint / Supabase cho Phase 6 (Render DB hết hạn 30 ngày; Supabase hết slot free)
-- [x] Tạo Neon project `chuccamau-yensao-medusa` (`morning-waterfall-43478669`, Singapore)
-- [x] Migrate + seed trên Neon (catalog sẵn)
-- [ ] Deploy Medusa lên Northflank (trỏ `DATABASE_URL` Neon)
-- [ ] Secrets / CORS + publishable key → FE
+- [x] Free path: **Neon** (Postgres) + **Render Free Web Service** (Medusa) — `docs/deploy-free.md`
+- [x] Neon project `chuccamau-yensao-medusa` + migrate + seed
+- [ ] Tạo Render Web Service (MCP cần chọn workspace; hoặc dashboard)
+- [ ] CORS / `MEDUSA_BACKEND_URL` khớp URL `.onrender.com`
+- [ ] Admin user trên Render shell + FE publishable key
 - [ ] (Tuỳ chọn) Redis / backup
 
 ### Setup Phase 6
 
-Xem chi tiết: **`docs/deploy-free.md`**.
+Xem **`docs/deploy-free.md`** + **`docs/render-env.template`**.
 
-1. Neon Free → copy connection string (`sslmode=require`).
-2. Northflank Developer Sandbox → Git deploy branch `feat/medusa-backend-mvp` (Dockerfile).
-3. Env: `DATABASE_URL`, JWT/COOKIE, CORS, `MEDUSA_BACKEND_URL`, `PAYMENT_MOCK=1`.
-4. Shell: `medusa user` · `yarn seed` · đưa `pk_…` vào storefront.
+1. Neon đã có `DATABASE_URL` (Console / agent store).
+2. Render → New → Web Service → repo `chuccamau-yensao-backend` · branch `feat/medusa-backend-mvp` · Node free · Singapore.
+3. Build/Start như template · dán env (Neon URL + JWT/COOKIE).
+4. Sau khi có URL: sửa CORS/`MEDUSA_*` · `yarn medusa user` · FE dùng `pk_…` đã seed.
 ---
 
 ## Phase 7 — Chất lượng & bảo mật
@@ -329,4 +328,5 @@ Chỉ bắt đầu khi Phase 0–6 ổn định trên production. Mỗi mục c�
 2. Ghi ngắn trong PR khi đóng phase.  
 3. Scope mới → đúng phase; không nhét vào MVP đã đóng.
 
-**Cập nhật:** 2026-09-14 — Phase 6 chuyển Neon + Northflank (free-forever); bỏ Render Blueprint.
+**Cập nhật:** 2026-09-14 — Phase 6: Neon + Render Free Web (bỏ Northflank).
+

@@ -1,18 +1,18 @@
-# Deploy free-forever (Phase 6)
+# Deploy free-forever (Phase 6) — Neon + Render
 
-Mục tiêu: Postgres + Medusa Node cho shop nhỏ, **tier miễn phí không hết hạn 30 ngày**.
+Mục tiêu: Postgres + Medusa Node, **free không hết hạn 30 ngày** (DB).
 
-| Vai trò              | Dịch vụ                                                    | Ghi chú                                                                 |
-| -------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------- |
-| Postgres             | **[Neon](https://neon.tech)** Free                         | Free mãi · scale-to-zero · 0.5 GB/project · không dùng slot Supabase    |
-| App Medusa           | **[Northflank](https://northflank.com)** Developer Sandbox | Free · 2 services + 1 addon · Git deploy · cần payment method để verify |
-| (Tuỳ chọn always-on) | **Oracle Cloud Always Free** ARM VM                        | VM thật 24/7 · capacity ARM hay hết · setup nặng hơn                    |
+| Vai trò | Dịch vụ | Ghi chú |
+|--------|---------|---------|
+| Postgres | **[Neon](https://neon.tech)** Free | Đã tạo · scale-to-zero · Singapore |
+| App Medusa | **[Render](https://render.com)** Free **Web Service** | Sleep ~15 phút idle · **không** dùng Render Postgres |
+| (Tuỳ chọn 24/7) | Oracle Always Free ARM | Nặng hơn |
+
+**Không dùng:** Render Blueprint/Postgres (DB hết hạn 30 ngày), Northflank, Supabase (hết slot).
 
 ---
 
-## 1) Neon — tạo DB
-
-**Đã tạo qua MCP (2026-09-14):**
+## 1) Neon — Postgres (đã xong)
 
 | | |
 |--|--|
@@ -20,64 +20,51 @@ Mục tiêu: Postgres + Medusa Node cho shop nhỏ, **tier miễn phí không h�
 | ID | `morning-waterfall-43478669` |
 | Region | `aws-ap-southeast-1` |
 | Database / role | `medusa` / `medusa` |
-| Branch | `main` (`br-fancy-darkness-b3qbaupz`) |
 
-Connection string: Neon Console → project → **Connection details** (hoặc agent store `neon-chuccamau-yensao.md`).  
-Dùng **direct** host (không `-pooler`) cho `db:migrate`; pooled OK cho runtime. Luôn có `sslmode=require`. **Không commit** URL có password.
+`DATABASE_URL`: Neon Console → Connection details (agent store `neon-chuccamau-yensao.md`).  
+Direct host cho migrate; `sslmode=require`. **Không commit** password.
 
-**Đã chạy trên Neon:** `medusa db:migrate` + `yarn seed` (catalog VN + publishable key).  
-Cold start vài giây sau idle — ổn với MVP.
+Đã chạy: `medusa db:migrate` + `yarn seed` (20 products + publishable key).
 
 ---
 
-## 2A) Northflank — deploy Medusa (khuyến nghị)
+## 2) Render — Web Service (Medusa)
 
-1. Đăng ký · chọn **Developer Sandbox**.
-2. New project → **Combined service** (hoặc Build from Git) → repo `chuccamau-yensao-backend`, branch `feat/medusa-backend-mvp`.
-3. Runtime: Dockerfile trong repo (hoặc buildpack Node 20).
-4. Env (Secrets):
+### Qua MCP Cursor (khi auth OK)
 
-| Key                              | Giá trị                                           |
-| -------------------------------- | ------------------------------------------------- |
-| `DATABASE_URL`                   | Neon connection string                            |
-| `JWT_SECRET` / `COOKIE_SECRET`   | random dài                                        |
-| `NODE_ENV`                       | `production`                                      |
-| `STORE_CORS` / `AUTH_CORS`       | origin FE (`http://localhost:3000` + domain prod) |
-| `ADMIN_CORS`                     | URL public của service này                        |
-| `STORE_URL` / `STORE_PUBLIC_URL` | URL storefront                                    |
-| `MEDUSA_BACKEND_URL`             | URL public service                                |
-| `MEDUSA_FILE_URL`                | `{MEDUSA_BACKEND_URL}/static`                     |
-| `PAYMENT_MOCK`                   | `1` đến khi có VNPay/MoMo thật                    |
-| `PORT`                           | do platform set (Medusa bind `0.0.0.0:$PORT`)     |
+`create_web_service` · runtime **node** (không Docker) · plan **free** · region **singapore** · repo GitHub · branch `feat/medusa-backend-mvp`.
 
-5. Start / CMD đã có trong Dockerfile: migrate rồi `medusa start`.
-6. Sau deploy xanh: mở shell Northflank → `yarn medusa user …` · `yarn seed` · copy `pk_…` vào FE.
+### Qua dashboard
 
-Addon Postgres của Northflank cũng free trong sandbox — nhưng **Neon** tách DB rõ hơn và không phụ thuộc 1 addon slot.
+1. [dashboard.render.com](https://dashboard.render.com) → **New → Web Service**
+2. Connect `transon15042003/chuccamau-yensao-backend`
+3. Branch: `feat/medusa-backend-mvp` · Runtime: **Node**
+4. Build / Start:
 
----
+```text
+Build:  corepack enable && yarn install && yarn build
+Start:  yarn medusa db:migrate && yarn medusa start
+```
 
-## 2B) Oracle Always Free — nếu cần 24/7 không sleep
+5. Plan: **Free** · Region: **Singapore**
+6. Env: xem `docs/render-env.template` — dán `DATABASE_URL` Neon + JWT/COOKIE.
 
-1. [cloud.oracle.com](https://cloud.oracle.com) → Always Free · shape `VM.Standard.A1.Flex` (ARM).
-2. Ubuntu ARM · mở security list 80/443 · cài Docker · clone repo · `docker compose` hoặc `docker build` + run với env như bảng trên + Neon `DATABASE_URL`.
-3. Caddy/Nginx reverse proxy + HTTPS (Let’s Encrypt).
+Sau deploy: URL dạng `https://chuccamau-yensao-backend.onrender.com`  
+→ cập nhật `MEDUSA_BACKEND_URL`, `ADMIN_CORS`, `MEDUSA_FILE_URL` cho khớp URL thật.  
+Shell Render: `yarn medusa user -e admin@chuccamau.local -p '…'`
 
-ARM capacity thường thiếu — có thể phải retry tạo instance.
+FE: publishable key từ seed Neon.
+
+### Giới hạn Render Free
+
+- Sleep sau ~15 phút không traffic (cold start + Neon wake).
+- RAM ~512MB — Medusa có thể chặt; nếu OOM → cân nhắc starter hoặc Oracle VM.
 
 ---
 
 ## Sau deploy
 
-1. Health: `GET /health`
-2. Admin `/app` · seed catalog nếu chưa
-3. FE prod: `MEDUSA_BACKEND_URL` + publishable key
-4. Ảnh: dùng `STORE_PUBLIC_URL` (disk container ephemeral)
-
----
-
-## Giới hạn thực tế
-
-- Neon Free: storage 0.5 GB/project · CU-hours · scale-to-zero.
-- Northflank Sandbox: không dành production lớn; đủ MVP/hobby.
-- Oracle: free forever nhưng tự ops (SSH, firewall, cập nhật).
+1. `GET /health`
+2. Admin `/app`
+3. FE: backend URL + `pk_…`
+4. Ảnh: `STORE_PUBLIC_URL` (disk ephemeral)

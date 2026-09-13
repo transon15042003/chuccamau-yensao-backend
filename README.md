@@ -11,8 +11,8 @@ Medusa v2.8.4 + Postgres for the `chuccamau-yensao` storefront.
 
 ## Deploy (free forever)
 
-Phase 6: **Neon** (Postgres) + **Northflank** (app) — see [`docs/deploy-free.md`](docs/deploy-free.md).  
-Không dùng Render Blueprint / Supabase cho production free-tier.
+Phase 6: **Neon** (Postgres) + **Render Free Web Service** (Medusa) — see [`docs/deploy-free.md`](docs/deploy-free.md).  
+Không dùng Render Postgres / Blueprint / Northflank / Supabase cho path này.
 
 ## Quick start
 
