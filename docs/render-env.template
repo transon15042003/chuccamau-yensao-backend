@@ -8,12 +8,12 @@ JWT_SECRET=<generate-long-random>
 COOKIE_SECRET=<generate-long-random>
 PAYMENT_MOCK=1
 
-STORE_CORS=http://localhost:3000
-AUTH_CORS=http://localhost:3000
-# After first deploy, set these to the real onrender.com URL:
+# After first deploy, set these to the real onrender.com / Vercel URLs:
 ADMIN_CORS=https://<service>.onrender.com
-STORE_URL=http://localhost:3000
-STORE_PUBLIC_URL=http://localhost:3000
+STORE_URL=https://chuccamau-yensao-tran-sons-projects-703bf65b.vercel.app
+STORE_PUBLIC_URL=https://tpzkqxwytqlubdvdszlz.supabase.co/storage/v1/object/public/yensao-assets
+STORE_CORS=http://localhost:3000,https://chuccamau-yensao-tran-sons-projects-703bf65b.vercel.app
+AUTH_CORS=http://localhost:3000,https://chuccamau-yensao-tran-sons-projects-703bf65b.vercel.app,https://<service>.onrender.com
 MEDUSA_BACKEND_URL=https://<service>.onrender.com
 MEDUSA_FILE_URL=https://<service>.onrender.com/static
 

@@ -70,6 +70,7 @@ FE: publishable key từ seed Neon.
 ### Giới hạn Render Free
 
 - Sleep sau ~15 phút không traffic (cold start + Neon wake).
+- Giữ ấm: GitHub Action `.github/workflows/keep-alive.yml` ping `GET /health` mỗi 10 phút (phải nằm trên **default branch**). Cách dứt điểm: nâng plan **Starter**.
 - RAM ~512MB — Medusa có thể chặt; nếu OOM → cân nhắc starter hoặc Oracle VM.
 
 ---
@@ -79,4 +80,4 @@ FE: publishable key từ seed Neon.
 1. `GET /health`
 2. Admin `/app`
 3. FE: backend URL + `pk_…`
-4. Ảnh: `STORE_PUBLIC_URL` (disk ephemeral)
+4. Ảnh catalog: bucket Supabase `yensao-assets` (project The Wild Oasis, hết slot project mới). `STORE_PUBLIC_URL=https://tpzkqxwytqlubdvdszlz.supabase.co/storage/v1/object/public/yensao-assets`
