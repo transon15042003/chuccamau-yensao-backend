@@ -1,0 +1,142 @@
+[
+  {
+    "id": "chao-hai-san-yen-tuoi",
+    "name": "Cháo hải sản yến tươi",
+    "slug": "chao-hai-san-yen-tuoi",
+    "price": 60000,
+    "thumbnail": "/images/products/chao-sup-yen/chao_hai_san_to_yen.jpg",
+    "description": "Cháo hải sản yến tươi",
+    "categories": ["chao-sup-yen"],
+    "ingredient": [
+      "Yến Tươi 100%: Mỗi chén chứa yến nguyên chất, giàu axit amin và khoáng chất thiết yếu.",
+      "Hải Sản Cao Cấp: Tôm và cua được chọn lọc kỹ lưỡng, giữ trọn hương vị biển cả.",
+      "Gạo Thơm Tuyển Chọn: Cháo dẻo, mịn và thơm từ gạo chất lượng cao.",
+      "Rau Củ Tự Nhiên: Nấm và cà rốt sấy, bổ sung vitamin và chất xơ.",
+      "Gia Vị Tự Nhiên: Đậm đà, an toàn, theo công thức riêng biệt."
+    ],
+    "specs": [
+      {
+        "key": "size",
+        "value": ["không yến", "yến vụn 15g", "yến vụn 30g"]
+      },
+      {
+        "key": "savour",
+        "value": ["cua", "tôm", "cua & tôm"]
+      }
+    ],
+    "isNew": false,
+    "total": 312,
+    "totalSold": 201,
+    "createdAt": "2024-05-11T00:00:00.000Z",
+    "variants": [
+      {
+        "sku": "chaocua-0yen",
+        "name": "Cháo cua yến tươi  - không yến",
+        "specs": {
+          "size": "không yến",
+          "savour": "cua"
+        },
+        "price": 60000,
+        "stock": 112,
+        "isActive": true,
+        "thumbnail": "/images/products/chao-sup-yen/chao_cua_to_yen.jpg"
+      },
+      {
+        "sku": "chaocua-15g",
+        "name": "Cháo cua yến tươi  - 15 gram - yến vụn",
+        "specs": {
+          "size": "yến vụn 15g",
+          "savour": "cua"
+        },
+        "price": 115000,
+        "stock": 45,
+        "isActive": true,
+        "thumbnail": "/images/products/chao-sup-yen/chao_cua_to_yen.jpg"
+      },
+      {
+        "sku": "chaocua-30g",
+        "name": "Cháo cua yến tươi  - 30 gram - yến vụn",
+        "specs": {
+          "size": "yến vụn 30g",
+          "savour": "cua"
+        },
+        "price": 160000,
+        "stock": 67,
+        "isActive": true,
+        "thumbnail": "/images/products/chao-sup-yen/chao_cua_to_yen.jpg"
+      },
+      {
+        "sku": "chaotom-0yen",
+        "name": "Cháo tôm yến tươi  - không yến",
+        "specs": {
+          "size": "không yến",
+          "savour": "tôm"
+        },
+        "price": 60000,
+        "stock": 112,
+        "isActive": true,
+        "thumbnail": "/images/products/chao-sup-yen/chao_tom_to_yen.jpg"
+      },
+      {
+        "sku": "chaotom-15g",
+        "name": "Cháo tôm yến tươi  - 15 gram - yến vụn",
+        "specs": {
+          "size": "yến vụn 15g",
+          "savour": "tôm"
+        },
+        "price": 115000,
+        "stock": 45,
+        "isActive": true,
+        "thumbnail": "/images/products/chao-sup-yen/chao_tom_to_yen.jpg"
+      },
+      {
+        "sku": "chaotom-30g",
+        "name": "Cháo tôm yến tươi  - 30 gram - yến vụn",
+        "specs": {
+          "size": "yến vụn 30g",
+          "savour": "tôm"
+        },
+        "price": 160000,
+        "stock": 67,
+        "isActive": true,
+        "thumbnail": "/images/products/chao-sup-yen/chao_tom_to_yen.jpg"
+      },
+      {
+        "sku": "chaocuatom-0yen",
+        "name": "Cháo tôm cua yến tươi  - không yến",
+        "specs": {
+          "size": "không yến",
+          "savour": "cua & tôm"
+        },
+        "price": 60000,
+        "stock": 112,
+        "isActive": true,
+        "thumbnail": "/images/products/chao-sup-yen/chao_hai_san_to_yen.jpg"
+      },
+      {
+        "sku": "chaocuatom-15g",
+        "name": "Cháo tôm cua yến tươi  - 15 gram - yến vụn",
+        "specs": {
+          "size": "yến vụn 15g",
+          "savour": "cua & tôm"
+        },
+        "price": 115000,
+        "stock": 45,
+        "isActive": true,
+        "thumbnail": "/images/products/chao-sup-yen/chao_hai_san_to_yen.jpg"
+      },
+      {
+        "sku": "chaocuatom-30g",
+        "name": "Cháo tôm cua yến tươi  - 30 gram - yến vụn",
+        "specs": {
+          "size": "yến vụn 30g",
+          "savour": "cua & tôm"
+        },
+        "price": 160000,
+        "stock": 67,
+        "isActive": true,
+        "thumbnail": "/images/products/chao-sup-yen/chao_hai_san_to_yen.jpg"
+      }
+    ]
+  }
+]

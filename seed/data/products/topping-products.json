@@ -1,0 +1,260 @@
+[
+  {
+    "id": "tao-do",
+    "name": "Táo Đỏ",
+    "slug": "tao-do",
+    "price": 5000,
+    "thumbnail": "/images/products/topping/tao-do-1.jpg",
+    "description": "Táo đỏ",
+    "categories": ["topping"],
+    "ingredient": [
+      "Táo đỏ ngọt tự nhiên, bổ dưỡng, tăng hương vị thơm ngon cho món yến chưng.",
+      "Chứa nhiều vitamin và khoáng chất giúp tăng cường sức khỏe, bổ huyết và làm đẹp da.",
+      "Dễ sử dụng, chỉ cần chưng cùng yến hoặc kết hợp với các món tráng miệng.",
+      "Bảo quản đơn giản, dùng ngay sau khi mở để giữ trọn hương vị và dinh dưỡng."
+    ],
+    "specs": [
+      {
+        "key": "size",
+        "value": ["1 phần"]
+      },
+      {
+        "key": "savour",
+        "value": ["táo đỏ"]
+      }
+    ],
+    "isNew": false,
+    "total": 312,
+    "totalSold": 201,
+    "createdAt": "2025-01-13T00:00:00.000Z",
+    "variants": [
+      {
+        "sku": "tao-do",
+        "name": "Táo đỏ",
+        "specs": {
+          "size": "1 phần",
+          "savour": "táo đỏ"
+        },
+        "price": 5000,
+        "stock": 112,
+        "isActive": true,
+        "thumbnail": "/images/products/topping/tao-do-1.jpg"
+      }
+    ]
+  },
+  {
+    "id": "saffron",
+    "name": "Saffron",
+    "slug": "saffron",
+    "price": 20000,
+    "thumbnail": "/images/products/topping/saffron_1.jpg",
+    "description": "Saffron",
+    "categories": ["topping"],
+    "ingredient": [
+      "Hỗ trợ cải thiện giấc ngủ, giúp thư giãn tinh thần và tăng cường sức khỏe hệ thần kinh.",
+      "Chứa chất chống oxy hóa mạnh, giúp làm đẹp da, giảm nếp nhăn và tăng độ đàn hồi cho làn da khỏe mạnh.",
+      "Tăng cường hệ miễn dịch nhờ vitamin C, bảo vệ cơ thể khỏi tác nhân gây hại từ môi trường.",
+      "Giúp cải thiện tâm trạng, giảm căng thẳng và lo âu, mang lại cảm giác thư thái, dễ chịu."
+    ],
+    "specs": [
+      {
+        "key": "size",
+        "value": ["1 phần"]
+      },
+      {
+        "key": "savour",
+        "value": ["saffron"]
+      }
+    ],
+    "isNew": false,
+    "total": 312,
+    "totalSold": 201,
+    "createdAt": "2025-03-22T00:00:00.000Z",
+    "variants": [
+      {
+        "sku": "saffron",
+        "name": "Saffron",
+        "specs": {
+          "size": "1 phần",
+          "savour": "saffron"
+        },
+        "price": 20000,
+        "stock": 112,
+        "isActive": true,
+        "thumbnail": "/images/products/topping/saffron_1.jpg"
+      }
+    ]
+  },
+  {
+    "id": "nhan-nhuc",
+    "name": "Nhãn Nhục",
+    "slug": "nhan-nhuc",
+    "price": 5000,
+    "thumbnail": "/images/products/topping/nhan_nhuc_01.jpg",
+    "description": "Nhãn Nhục",
+    "categories": ["topping"],
+    "ingredient": [
+      "Kết hợp cùng yến chưng tươi, tạo nên món ăn vừa thơm ngon vừa bổ dưỡng, nâng cao giá trị dinh dưỡng.",
+      "Cung cấp năng lượng nhanh chóng, giúp bồi bổ cơ thể, rất phù hợp cho người cần phục hồi sức khỏe hoặc đang mệt mỏi.",
+      "Hỗ trợ giấc ngủ sâu và thư thái nhờ khả năng an thần nhẹ nhàng, giúp cải thiện chất lượng giấc ngủ.",
+      "Vị ngọt thanh nhẹ, hương thơm dịu dàng, dễ dàng kết hợp với nhiều món ăn, phù hợp cho cả người lớn và trẻ nhỏ."
+    ],
+    "specs": [
+      {
+        "key": "size",
+        "value": ["1 phần"]
+      },
+      {
+        "key": "savour",
+        "value": ["nhãn nhục"]
+      }
+    ],
+    "isNew": false,
+    "total": 312,
+    "totalSold": 201,
+    "createdAt": "2025-05-09T00:00:00.000Z",
+    "variants": [
+      {
+        "sku": "nhan-nhuc",
+        "name": "Nhãn nhục",
+        "specs": {
+          "size": "1 phần",
+          "savour": "nhãn nhục"
+        },
+        "price": 5000,
+        "stock": 112,
+        "isActive": true,
+        "thumbnail": "/images/products/topping/nhan_nhuc_01.jpg"
+      }
+    ]
+  },
+  {
+    "id": "ki-tu",
+    "name": "Kỉ Tử",
+    "slug": "ki-tu",
+    "price": 5000,
+    "thumbnail": "/images/products/topping/ki_tu.jpg",
+    "description": "Kỉ Tử",
+    "categories": ["topping"],
+    "ingredient": [
+      "Hỗ trợ tăng cường hệ miễn dịch, giúp cơ thể chống lại các bệnh nhiễm trùng và duy trì sức khỏe trong những thời điểm nhạy cảm.",
+      "Giúp làm chậm quá trình lão hóa, cải thiện làn da, giảm nếp nhăn và giữ cho làn da luôn tươi trẻ, khỏe mạnh",
+      "Vị ngọt thanh, nhẹ nhàng, dễ chịu, hòa quyện tuyệt vời với yến chưng tạo nên món ăn ngon miệng, giàu dưỡng chất.",
+      "Phù hợp với nhiều đối tượng từ người lớn tuổi, người làm việc căng thẳng, trẻ em đến người cần phục hồi sức khỏe."
+    ],
+    "specs": [
+      {
+        "key": "size",
+        "value": ["1 phần"]
+      },
+      {
+        "key": "savour",
+        "value": ["kỉ tử"]
+      }
+    ],
+    "isNew": false,
+    "total": 312,
+    "totalSold": 201,
+    "createdAt": "2025-07-18T00:00:00.000Z",
+    "variants": [
+      {
+        "sku": "ki-tu",
+        "name": "Kỉ Tử",
+        "specs": {
+          "size": "1 phần",
+          "savour": "kỉ tử"
+        },
+        "price": 5000,
+        "stock": 112,
+        "isActive": true,
+        "thumbnail": "/images/products/topping/ki_tu.jpg"
+      }
+    ]
+  },
+  {
+    "id": "hat-sen",
+    "name": "Hạt Sen",
+    "slug": "hat-sen",
+    "price": 5000,
+    "thumbnail": "/images/products/topping/hat_sen_01.png",
+    "description": "Hạt Sen",
+    "categories": ["topping"],
+    "ingredient": [
+      "Tăng cường sức khỏe tim mạch: Hạt sen giàu magie và kali, giúp ổn định huyết áp và bảo vệ tim mạch khỏe mạnh.",
+      "Giúp an thần, ngủ ngon: Với tác dụng thư giãn tinh thần tự nhiên, hạt sen hỗ trợ giấc ngủ sâu, giảm căng thẳng hiệu quả.",
+      "Hỗ trợ hệ tiêu hóa: Hàm lượng chất xơ trong hạt sen giúp cải thiện chức năng tiêu hóa, phòng ngừa táo bón.",
+      "Bổ sung năng lượng: Protein và vitamin B trong hạt sen giúp phục hồi năng lượng nhanh, rất phù hợp cho người bận rộn hoặc cần tăng cường sức khỏe."
+    ],
+    "specs": [
+      {
+        "key": "size",
+        "value": ["1 phần"]
+      },
+      {
+        "key": "savour",
+        "value": ["hạt sen"]
+      }
+    ],
+    "isNew": false,
+    "total": 312,
+    "totalSold": 201,
+    "createdAt": "2025-09-27T00:00:00.000Z",
+    "variants": [
+      {
+        "sku": "hat-sen",
+        "name": "Hạt sen",
+        "specs": {
+          "size": "1 phần",
+          "savour": "hạt sen"
+        },
+        "price": 5000,
+        "stock": 112,
+        "isActive": true,
+        "thumbnail": "/images/products/topping/hat_sen_01.png"
+      }
+    ]
+  },
+  {
+    "id": "hat-chia",
+    "name": "Hạt Chia",
+    "slug": "hat-chia",
+    "price": 5000,
+    "thumbnail": "/images/products/topping/hat-chia-1.jpg",
+    "description": "Hạt Chia",
+    "categories": ["topping"],
+    "ingredient": [
+      "Giàu chất xơ giúp cải thiện tiêu hóa, ngăn ngừa táo bón.",
+      "Cung cấp protein và omega-3 cho năng lượng bền vữn",
+      "Giúp giảm cholesterol xấu, ổn định huyết áp.",
+      "Chống oxy hóa, ngăn ngừa lão hóa và mụn."
+    ],
+    "specs": [
+      {
+        "key": "size",
+        "value": ["1 phần"]
+      },
+      {
+        "key": "savour",
+        "value": ["hạt chia"]
+      }
+    ],
+    "isNew": false,
+    "total": 312,
+    "totalSold": 201,
+    "createdAt": "2025-11-04T00:00:00.000Z",
+    "variants": [
+      {
+        "sku": "hat-chia",
+        "name": "Hạt chia",
+        "specs": {
+          "size": "1 phần",
+          "savour": "hạt chia"
+        },
+        "price": 5000,
+        "stock": 112,
+        "isActive": true,
+        "thumbnail": "/images/products/topping/hat-chia-1.jpg"
+      }
+    ]
+  }
+]

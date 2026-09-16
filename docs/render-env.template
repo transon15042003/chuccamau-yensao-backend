@@ -1,0 +1,28 @@
+# Env template for Render Web Service + Neon (no secrets in git)
+
+# From Neon Console (direct host preferred):
+DATABASE_URL=postgresql://medusa:<PASSWORD>@ep-nameless-queen-b3gaq5gz.c-4.ap-southeast-1.aws.neon.tech/medusa?sslmode=require
+
+NODE_ENV=production
+JWT_SECRET=<generate-long-random>
+COOKIE_SECRET=<generate-long-random>
+PAYMENT_MOCK=1
+
+# After first deploy, set these to the real onrender.com / Vercel URLs:
+ADMIN_CORS=https://<service>.onrender.com
+STORE_URL=https://chuccamau-yensao-tran-sons-projects-703bf65b.vercel.app
+STORE_PUBLIC_URL=https://tpzkqxwytqlubdvdszlz.supabase.co/storage/v1/object/public/yensao-assets
+STORE_CORS=http://localhost:3000,https://chuccamau-yensao-tran-sons-projects-703bf65b.vercel.app
+AUTH_CORS=http://localhost:3000,https://chuccamau-yensao-tran-sons-projects-703bf65b.vercel.app,https://<service>.onrender.com
+MEDUSA_BACKEND_URL=https://<service>.onrender.com
+MEDUSA_FILE_URL=https://<service>.onrender.com/static
+
+# Build / Start (Node runtime — MCP create_web_service does not use Dockerfile):
+# Build: corepack enable && yarn install && yarn build
+# Start: yarn medusa db:migrate && yarn medusa start
+# Repo: https://github.com/transon15042003/chuccamau-yensao-backend
+# Branch: feat/medusa-backend-mvp
+# Plan: free · Region: singapore
+
+# FE publishable key (already seeded on Neon):
+# pk_e012975dd4b375cc67bcfdb113c4f1f579ac423fbb8750c502a057ad383c569c
