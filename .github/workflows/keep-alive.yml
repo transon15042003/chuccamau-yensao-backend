@@ -1,0 +1,16 @@
+# Ping Render Free so the Medusa web service does not sleep after ~15m idle.
+# Scheduled workflows only run on the repo default branch.
+name: Keep Render awake
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: GET /health
+        run: curl -fsS --retry 3 --retry-delay 10 --max-time 90 "https://chuccamau-yensao-backend.onrender.com/health"
